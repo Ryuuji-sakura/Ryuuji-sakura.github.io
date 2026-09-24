@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>空フォルダ削除 サポート / Empty Folder Cleaner Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; padding: 2rem 1.25rem 4rem; max-width: 40rem; margin-inline: auto;
+         font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Noto Sans JP", sans-serif; }
+  h1 { font-size: 1.6rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.25rem; margin: 2.5rem 0 .75rem; padding-top: 1.5rem; border-top: 1px solid rgba(128,128,128,.35); }
+  h3 { font-size: 1rem; margin: 1.4rem 0 .25rem; }
+  p { margin: .4rem 0; }
+  nav { font-size: .9rem; margin-bottom: 1.5rem; }
+  .contact { padding: 1rem 1.2rem; border: 1px solid rgba(128,128,128,.35); border-radius: .75rem; margin: 1rem 0; }
+  footer { margin-top: 3rem; font-size: .85rem; opacity: .7; }
+</style>
+</head>
+<body>
+<h1>空フォルダ削除 サポート</h1>
+<nav><a href="#en">English</a> · <a href="privacy.html">プライバシーポリシー</a> · <a href="../">Apps</a></nav>
+
+<div class="contact">
+  <strong>お問い合わせ・不具合の報告</strong><br>
+  GitHub の Issues にお書きください（GitHub アカウントが必要です）。<br>
+  <a href="https://github.com/Ryuuji-sakura/Ryuuji-sakura.github.io/issues/new">github.com/Ryuuji-sakura/Ryuuji-sakura.github.io/issues</a><br>
+  書いていただきたいこと: お使いの Mac と macOS のバージョン、何をしたときに何が起きたか。
+</div>
+
+<h3>空フォルダ削除とは</h3>
+<p>選んだフォルダの中から、中身が空のフォルダを探してまとめて片付ける Mac アプリです。入れ子になっていても、いちばん奥まで一度で見つけます。見つかったものは一覧に出るので、消したくないものはチェックを外してから実行できます。</p>
+
+<h3>必要な環境</h3>
+<p>macOS 14（Sonoma）以降。</p>
+
+<h3>よくある質問</h3>
+
+<p><strong>「削除できるものは見つかりませんでした」と出る</strong><br>
+そのフォルダ以下のどこかに実ファイルが1つでもあると、上のフォルダは空とみなしません。また、隠しフォルダ（<code>.git</code> など）と、パッケージ（<code>.app</code>、写真ライブラリ、<code>.xcodeproj</code> など）の中には入りません。中に空のフォルダがあっても触らない作りです。中身を壊さないための仕様です。</p>
+
+<p><strong>Finder で見ると空なのに、対象にならない</strong><br>
+目に見えない <code>.DS_Store</code> というファイルが入っていることがあります。「Finderの設定ファイルだけが残っているフォルダも、空として削除する」がオンになっているか確認してください（既定はオン）。それでも対象にならない場合は、さらに奥の階層に実ファイルが残っています。</p>
+
+<p><strong>「Finderの設定ファイル」とは何ですか</strong><br>
+<code>.DS_Store</code> という名前の、目に見えないファイルです。フォルダを開いたときの並び順、ウィンドウの大きさ、アイコンの位置を覚えておくために Finder が自動で作ります。消してもフォルダ名や中のファイルには影響しません。</p>
+
+<p><strong>消したはずの設定ファイルが戻ってくる</strong><br>
+次にそのフォルダを Finder で開くと、Finder が自動的に作り直します。削除に失敗したわけではありません。</p>
+
+<p><strong>選んだフォルダ自体は消えますか</strong><br>
+消えません。消えるのはその中にある空のフォルダだけです。</p>
+
+<p><strong>間違えて消してしまった</strong><br>
+既定ではゴミ箱に入ります。ゴミ箱で右クリックして「戻す」を選ぶと、元の場所に戻ります。入れ子になった空フォルダはまとめて1項目としてゴミ箱に入るので、元の形のまま戻ります。</p>
+
+<p><strong>「完全に削除する」と何が違いますか</strong><br>
+「削除したものをゴミ箱に入れる」のチェックを外すと完全削除になり、ゴミ箱を経由せず、<strong>元に戻せません</strong>。このときはボタンが赤くなり、確認画面でも Enter キーでは実行できないようにしてあります。必ずクリックが必要です。</p>
+
+<p><strong>大きなフォルダを選ぶと時間がかかる</strong><br>
+ホームフォルダのような大きな場所は、調べるのに時間がかかります。進み具合は「スキャン中... ○○項目」と件数で表示されます。やめたいときは「中止」ボタン（または ⌘.）を押してください。</p>
+
+<p><strong>中止すると、そこまでの結果は残りませんか</strong><br>
+残しません。途中で止めた場合、まだ見ていない場所にファイルが残っている可能性があります。「空に見えただけ」のフォルダを削除候補として出すわけにはいかないので、調べかけの結果はすべて捨てます。「もう一度調べる」でやり直してください。</p>
+
+<p><strong>名前が「.DS_Store 12-34-56」のようなファイルも消えますか</strong><br>
+NAS やクラウド同期で名前が変わったものも対象にしますが、名前だけでは判断しません。ファイルの中身を確認して、本当に Finder が作ったものだけを消します。ご自分で <code>.DS_Store</code> から始まる名前を付けたファイルが消えることはありません。</p>
+
+<p><strong>このアプリはどこまで見られますか</strong><br>
+あなたが渡したフォルダの中だけです。App Sandbox に対応していて、それ以外の場所にはアクセスできません。</p>
+
+<p><strong>データはどこかに送信されますか</strong><br>
+送信しません。このアプリは一切の通信を行いません。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+
+<h2 id="en">Empty Folder Cleaner Support</h2>
+
+<div class="contact">
+  <strong>Contact / bug reports</strong><br>
+  Please open a GitHub Issue (a GitHub account is required).<br>
+  <a href="https://github.com/Ryuuji-sakura/Ryuuji-sakura.github.io/issues/new">github.com/Ryuuji-sakura/Ryuuji-sakura.github.io/issues</a><br>
+  Please include your Mac model, macOS version, and what you were doing when the problem happened.
+</div>
+
+<h3>What is Empty Folder Cleaner?</h3>
+<p>A Mac app that finds empty folders inside a folder you choose and clears them out together. Nested empty folders are found all the way down in a single pass. Everything found is listed, so you can uncheck anything you want to keep before deleting. The app's interface is in Japanese.</p>
+
+<h3>Requirements</h3>
+<p>macOS 14 (Sonoma) or later.</p>
+
+<h3>FAQ</h3>
+
+<p><strong>It says nothing was found</strong><br>
+If there is even one real file anywhere beneath a folder, that folder is not treated as empty. The app also never descends into hidden folders (such as <code>.git</code>) or packages (<code>.app</code>, photo libraries, <code>.xcodeproj</code>), even if they contain empty folders inside — deleting those would break the enclosing app or repository.</p>
+
+<p><strong>A folder looks empty in Finder but isn't offered</strong><br>
+It probably contains an invisible <code>.DS_Store</code> file. Check that the “treat folders containing only a Finder settings file as empty” option is on (it is by default). If it still isn't offered, there is a real file deeper in the tree.</p>
+
+<p><strong>What is the “Finder settings file”?</strong><br>
+It is <code>.DS_Store</code>, an invisible file Finder creates to remember a folder's sort order, window size, and icon positions. Deleting it does not affect folder names or the files inside.</p>
+
+<p><strong>A deleted settings file came back</strong><br>
+Finder recreates it the next time it displays that folder. The deletion did not fail.</p>
+
+<p><strong>Will the folder I chose be deleted?</strong><br>
+No. Only empty folders inside it are deleted.</p>
+
+<p><strong>I deleted something by mistake</strong><br>
+By default items go to the Trash. Right-click in the Trash and choose “Put Back” to restore them. A run of nested empty folders goes to the Trash as one item, so it comes back with its structure intact.</p>
+
+<p><strong>How is “delete permanently” different?</strong><br>
+Turning off “move deleted items to the Trash” deletes without using the Trash, and it <strong>cannot be undone</strong>. In that mode the button turns red and the confirmation dialog deliberately has no default button, so the Return key cannot trigger it — you have to click.</p>
+
+<p><strong>Scanning a large folder takes a long time</strong><br>
+Large locations such as your home folder take a while. Progress is shown as a live item count, and you can stop at any time with the Stop button (or ⌘.).</p>
+
+<p><strong>If I stop, do I keep the partial results?</strong><br>
+No. When a scan is stopped part way, there may be files in places it never reached, so folders that merely <em>looked</em> empty must not be offered for deletion. Everything gathered so far is discarded. Use “Scan again” to restart.</p>
+
+<p><strong>Are files named like “.DS_Store 12-34-56” deleted too?</strong><br>
+Variant names left by NAS or cloud sync are handled, but never on the strength of the name alone. The file's contents are checked, so only real Finder metadata is removed — a file you named yourself starting with <code>.DS_Store</code> is never touched.</p>
+
+<p><strong>What can the app see?</strong><br>
+Only the folder you hand it. The app runs in the App Sandbox and cannot reach anything else.</p>
+
+<p><strong>Is any data sent anywhere?</strong><br>
+No. The app performs no network communication at all. See the <a href="privacy.html#en">Privacy Policy</a>.</p>
+
+<footer>© 2026 半歩舎</footer>
+</body>
+</html>
