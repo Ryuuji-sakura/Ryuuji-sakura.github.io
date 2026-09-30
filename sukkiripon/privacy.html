@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>スッキリポン！ プライバシーポリシー / Sukkiripon! Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; padding: 2rem 1.25rem 4rem; max-width: 40rem; margin-inline: auto;
+         font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Noto Sans JP", sans-serif; }
+  h1 { font-size: 1.6rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.25rem; margin: 2.5rem 0 .75rem; padding-top: 1.5rem; border-top: 1px solid rgba(128,128,128,.35); }
+  h3 { font-size: 1rem; margin: 1.4rem 0 .25rem; }
+  p, li { margin: .4rem 0; }
+  nav { font-size: .9rem; margin-bottom: 1.5rem; }
+  code { word-break: break-all; }
+  .date { font-size: .9rem; opacity: .7; }
+  footer { margin-top: 3rem; font-size: .85rem; opacity: .7; }
+</style>
+</head>
+<body>
+<h1>スッキリポン！ プライバシーポリシー</h1>
+<p class="date">最終更新: 2026年10月1日</p>
+<nav><a href="#en">English</a> · <a href="./">サポート</a> · <a href="../">Apps</a></nav>
+
+<p>スッキリポン！（以下「本アプリ」）は、半歩舎（Ryuuji Hara）が開発・配布する Mac 用アプリです。本アプリは、利用者の個人情報を収集・送信しません。</p>
+
+<h3>本アプリが扱う情報</h3>
+<p>本アプリは、利用者が選んだフォルダやディスクの中身（ファイルやフォルダの名前、パス、サイズ、日付、ファイルの中身から計算したハッシュ値、音楽ファイルのタグと音質の測定結果）を読み取って、片付けの提案を作ります。これらは提案を作って画面に表示するためだけに使われ、端末の外に出ることはありません。開発者を含む第三者に送信されることは一切ありません。</p>
+
+<h3>通信について</h3>
+<p><strong>本アプリは一切の通信を行いません。</strong>インターネットへの接続機能を持たず（App Sandbox のネットワーク接続の権限も持っていません）、外部サーバーへの送信も、外部からの取得もありません。アカウントの登録も不要です。</p>
+<p>ネットワーク上のディスク（NAS など）を調べる場合も、macOS が接続済みの共有を通常のフォルダとして読み書きするだけで、本アプリ自身が通信を行うことはありません。</p>
+
+<h3>端末に保存される情報</h3>
+<p>次の情報を、本アプリ専用の保存場所（<code>~/Library/Containers/com.ryuujisakura.sukkiripon</code>）に保存します。いずれも端末の中だけに置かれます。</p>
+<ul>
+  <li><strong>設定</strong>: 守るフォルダ、整理待ち扱いの場所、行き先フォルダの名前、しきい値などの設定値</li>
+  <li><strong>場所の記憶</strong>: 利用者が選んだフォルダやディスクのパスと、次回も開けるようにするための macOS のブックマーク</li>
+  <li><strong>調べた結果</strong>: 2 回目以降を速くするための、ファイルの一覧（名前、パス、サイズ、日付）、ハッシュ値、音楽の情報</li>
+  <li><strong>実行の記録</strong>: 元に戻すための、ゴミ箱に入れたファイルや移したファイルの元の場所と行き先</li>
+  <li><strong>振り分けのルール</strong>: 利用者がルールのファイルを開いたときだけ作られます</li>
+  <li>初回の案内を表示し終えたかどうか</li>
+</ul>
+
+<h3>アクセスできる範囲</h3>
+<p>本アプリは App Sandbox に対応しています。アクセスできるのは、利用者がドラッグ＆ドロップまたは「選ぶ…」で明示的に渡したフォルダやディスクだけで、それ以外の場所を読むことはできません。</p>
+
+<h3>収集しない情報</h3>
+<ul>
+  <li>利用状況の分析データ（アナリティクス）</li>
+  <li>広告識別子、トラッキング</li>
+  <li>位置情報、連絡先、写真</li>
+  <li>クラッシュレポート（Apple が提供する仕組みで、利用者が Apple への共有に同意した場合に限り、Apple から開発者に匿名の統計が提供されることがあります）</li>
+</ul>
+
+<h3>データの削除</h3>
+<p>保存された情報をすべて消すには、本アプリを終了してから、Finder の「移動」→「フォルダへ移動…」で <code>~/Library/Containers/com.ryuujisakura.sukkiripon</code> を開き、このフォルダをゴミ箱に入れてください。本アプリをゴミ箱に入れただけでは、このフォルダは残ることがあります。</p>
+
+<h3>お問い合わせ</h3>
+<p>本ポリシーに関するご質問は、<a href="https://github.com/Ryuuji-sakura/Ryuuji-sakura.github.io/issues">GitHub の Issues</a> にお寄せください。</p>
+
+<h3>変更について</h3>
+<p>本ポリシーを変更する場合は、このページで公開します。</p>
+
+<h2 id="en">Sukkiripon! Privacy Policy</h2>
+<p class="date">Last updated: October 1, 2026</p>
+
+<p>Sukkiripon! (“the app”) is a Mac app developed and distributed by 半歩舎 (Ryuuji Hara). The app does not collect or transmit any personal information.</p>
+
+<h3>Information the app handles</h3>
+<p>The app reads the contents of the folders and disks you choose — file and folder names, paths, sizes, dates, hash values computed from file contents, and music tags and measured audio quality — in order to build cleanup proposals. This information is used only to build proposals and show them on screen, and never leaves your Mac. It is never sent to the developer or to any third party.</p>
+
+<h3>Network</h3>
+<p><strong>The app performs no network communication at all.</strong> It has no networking capability (it does not hold the App Sandbox network entitlement): nothing is uploaded, and nothing is fetched. No account is required.</p>
+<p>When you scan a network disk such as a NAS, the app simply reads and writes a share that macOS has already connected, as an ordinary folder. The app itself makes no network connections.</p>
+
+<h3>What is stored on your Mac</h3>
+<p>The app stores the following in its own container (<code>~/Library/Containers/com.ryuujisakura.sukkiripon</code>). All of it stays on your Mac.</p>
+<ul>
+  <li><strong>Settings</strong>: protected folders, holding areas, destination folder names, thresholds, and similar values</li>
+  <li><strong>Remembered locations</strong>: paths of the folders and disks you chose, with the macOS bookmarks needed to reopen them next time</li>
+  <li><strong>Scan results</strong>: a list of files (names, paths, sizes, dates), hash values, and music information, kept so later scans are faster</li>
+  <li><strong>Run history</strong>: the original locations and destinations of items moved to the Trash or moved elsewhere, so they can be undone</li>
+  <li><strong>Sorting rules</strong>: created only if you open the rules file</li>
+  <li>Whether the first-launch welcome has been shown</li>
+</ul>
+
+<h3>What the app can reach</h3>
+<p>The app runs in the App Sandbox. It can only access folders and disks you hand it explicitly, by drag and drop or through the chooser. It cannot read anything else.</p>
+
+<h3>Information the app does not collect</h3>
+<ul>
+  <li>Usage analytics</li>
+  <li>Advertising identifiers or tracking</li>
+  <li>Location, contacts, or photos</li>
+  <li>Crash reports (Apple may provide the developer with anonymous statistics only if you have opted in to sharing with Apple)</li>
+</ul>
+
+<h3>Deleting your data</h3>
+<p>To remove everything the app has stored, quit the app, choose Go → Go to Folder… in Finder, open <code>~/Library/Containers/com.ryuujisakura.sukkiripon</code>, and move that folder to the Trash. Moving only the app to the Trash may leave this folder behind.</p>
+
+<h3>Contact</h3>
+<p>Questions about this policy: please open a <a href="https://github.com/Ryuuji-sakura/Ryuuji-sakura.github.io/issues">GitHub Issue</a>.</p>
+
+<h3>Changes</h3>
+<p>Any changes to this policy will be published on this page.</p>
+
+<footer>© 2026 半歩舎</footer>
+</body>
+</html>

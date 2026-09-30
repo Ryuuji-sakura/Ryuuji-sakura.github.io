@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>スッキリポン！ サポート / Sukkiripon! Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; padding: 2rem 1.25rem 4rem; max-width: 40rem; margin-inline: auto;
+         font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Noto Sans JP", sans-serif; }
+  h1 { font-size: 1.6rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.25rem; margin: 2.5rem 0 .75rem; padding-top: 1.5rem; border-top: 1px solid rgba(128,128,128,.35); }
+  h3 { font-size: 1rem; margin: 1.4rem 0 .25rem; }
+  p, li { margin: .4rem 0; }
+  nav { font-size: .9rem; margin-bottom: 1.5rem; }
+  .contact { padding: 1rem 1.2rem; border: 1px solid rgba(128,128,128,.35); border-radius: .75rem; margin: 1rem 0; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; margin: .5rem 0; }
+  th, td { border: 1px solid rgba(128,128,128,.35); padding: .35rem .6rem; text-align: left; vertical-align: top; }
+  footer { margin-top: 3rem; font-size: .85rem; opacity: .7; }
+</style>
+</head>
+<body>
+<h1>スッキリポン！ サポート</h1>
+<nav><a href="#en">English</a> · <a href="privacy.html">プライバシーポリシー</a> · <a href="../">Apps</a></nav>
+
+<div class="contact">
+  <strong>お問い合わせ・不具合の報告</strong><br>
+  GitHub の Issues にお書きください（GitHub アカウントが必要です）。<br>
+  <a href="https://github.com/Ryuuji-sakura/Ryuuji-sakura.github.io/issues/new">github.com/Ryuuji-sakura/Ryuuji-sakura.github.io/issues</a><br>
+  書いていただきたいこと: お使いの Mac と macOS のバージョン、調べた場所（内蔵・外付け・ネットワーク）、何をしたときに何が起きたか。
+</div>
+
+<h3>スッキリポン！とは</h3>
+<p>ディスクが一杯になったときに、何を片付ければいいかを一緒に考える Mac アプリです。フォルダやディスクを選んで「調べる」を押すと、中身を調べて「残す・ゴミ箱へ・移す」の提案を並べます。</p>
+<p>① 調べる → ② 確認する（消したくないものはチェックを外すだけ）→ ③ 実行する、の 3 ステップです。</p>
+
+<h3>見つけるもの</h3>
+<ul>
+  <li><strong>容量ランキング</strong>: どのフォルダが大きいか</li>
+  <li><strong>重複</strong>: 中身がまったく同じファイル（サイズ → 先頭と末尾 → 全体のハッシュで確かめます）</li>
+  <li><strong>音楽の品質比較</strong>: 同じ曲の別ファイルから、音のよい方を残す提案。高い音がどこまで入っているかを実際に測ります</li>
+  <li><strong>振り分け</strong>: 散らかった項目を「仕事・書類／音楽／写真・動画／バックアップ／アプリ」へ</li>
+  <li><strong>ISO・インストーラの収集</strong>: 散らばったインストーラを 1 か所へ</li>
+  <li><strong>空フォルダ</strong>: 中身の無いフォルダ</li>
+</ul>
+
+<h3>必要な環境</h3>
+<p>macOS 14（Sonoma）以降。</p>
+
+<h3>2 つの版</h3>
+<table>
+  <tr><th></th><th>App Store 版</th><th>無料版（調べるだけ）</th></tr>
+  <tr><td>① 調べる・② 提案を見る</td><td>できる</td><td>できる</td></tr>
+  <tr><td>一覧を CSV で書き出す</td><td>できる</td><td>できる</td></tr>
+  <tr><td>③ 実行する（ゴミ箱へ・移動）</td><td>できる</td><td>できない</td></tr>
+</table>
+<p>無料版は、お使いのディスクで何が見つかるかを先に確かめるためのものです。ファイルには一切手を触れません。</p>
+
+<h3>よくある質問</h3>
+
+<p><strong>本当に消えてしまいませんか</strong><br>
+このアプリは削除をしません。「ゴミ箱へ」はゴミ箱に入れるだけで、ゴミ箱を空にするまでは元に戻せます。移動は同じディスクの中だけで行い、記録が残るので元に戻せます。</p>
+
+<p><strong>間違えて実行してしまった</strong><br>
+ウインドウ右上の「履歴」を開き、戻したい回の「元に戻す」を押してください。1 回で複数の機能を実行したときは、機能ごとに分けて戻すこともできます。ゴミ箱を空にした後は戻せません。</p>
+
+<p><strong>実行したのに空き容量が増えない</strong><br>
+ゴミ箱に入れただけでは容量は空きません。確認して問題がなければ、Dock のゴミ箱を右クリックして「ゴミ箱を空にする」を選んでください。外付けディスクの分も同じ操作で空になります。</p>
+
+<p><strong>ネットワーク上のディスク（NAS）ではどうなりますか</strong><br>
+ネットワーク上にはゴミ箱が無いため、調べた場所の直下に「_スッキリポン ゴミ箱」というフォルダを作り、その中へ移します。元に戻すこともできます。不要と確認できたら、このフォルダをご自分で削除してください。</p>
+
+<p><strong>重複で、どちらを残すかを変えたい</strong><br>
+② の画面で、残したいファイルの行を右クリックして「こちらを残す」を選んでください。「同じパス内のファイルを残す」を選ぶと、同じフォルダにある候補をすべてのグループでまとめて残す側にできます。「残す方の決め方…」で、パスの長さや日付などの基準も変えられます。</p>
+
+<p><strong>重複の中に、最初からチェックが外れているものがある</strong><br>
+DLL ファイルのように、アプリごとに同じものを持つのが普通のファイルは、消すと動かなくなることがあるため、最初はチェックを外しています。中身を確かめてから、必要に応じてチェックしてください。</p>
+
+<p><strong>バックアップやカーナビ用のフォルダを触ってほしくない</strong><br>
+設定の「守るフォルダ」に追加してください。名前にその文字を含むフォルダの中は、丸ごと提案の対象から外れます。はじめは「カーナビ」が入っています。</p>
+
+<p><strong>「ハイレゾ表記（中身は CD 相当）」とは</strong><br>
+24bit/192kHz などの表記なのに、実際に測ると CD と同じくらいの高さまでしか音が入っていないファイルです。数字が大きいほど音がよいとは限りません。根拠のボタンから、測った結果のグラフを見られます。比べる相手がいない場合は「ハイレゾ表記（未確認）」となり、最初はチェックを外しています。</p>
+
+<p><strong>「権限がないため触れません」と出る</strong><br>
+そのファイルやフォルダに書き込む権限がありません。Finder でその項目を選んで「情報を見る」を開き、「共有とアクセス権」でご自分に「読み／書き」があるか確認してください。</p>
+
+<p><strong>2 回目以降の「調べる」が早い</strong><br>
+前回の結果を覚えていて、変わったファイルだけを調べ直すためです。</p>
+
+<p><strong>このアプリはどこまで見られますか</strong><br>
+あなたが選んだフォルダやディスクの中だけです。App Sandbox に対応していて、それ以外の場所にはアクセスできません。</p>
+
+<p><strong>データはどこかに送信されますか</strong><br>
+送信しません。このアプリは一切の通信を行いません。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+
+<h2 id="en">Sukkiripon! Support</h2>
+
+<div class="contact">
+  <strong>Contact / bug reports</strong><br>
+  Please open a GitHub Issue (a GitHub account is required).<br>
+  <a href="https://github.com/Ryuuji-sakura/Ryuuji-sakura.github.io/issues/new">github.com/Ryuuji-sakura/Ryuuji-sakura.github.io/issues</a><br>
+  Please include your Mac model, macOS version, the kind of location you scanned (internal, external, or network), and what you were doing when the problem happened.
+</div>
+
+<h3>What is Sukkiripon!?</h3>
+<p>A Mac app that helps you decide what to clean up when your disk is full. Choose a folder or disk and press Scan; the app examines its contents and proposes what to keep, what to move to the Trash, and what to move elsewhere. The app's interface is in Japanese.</p>
+<p>Three steps: 1. Scan → 2. Review (just uncheck anything you want to keep) → 3. Run.</p>
+
+<h3>What it finds</h3>
+<ul>
+  <li><strong>Size ranking</strong>: which folders are largest</li>
+  <li><strong>Duplicates</strong>: files with identical contents (checked by size, then the first and last parts, then a full hash)</li>
+  <li><strong>Music quality comparison</strong>: among copies of the same song, proposes keeping the better one, based on a measurement of how high the recorded frequencies actually reach</li>
+  <li><strong>Sorting</strong>: moves scattered items into Work &amp; Documents / Music / Photos &amp; Video / Backups / Apps</li>
+  <li><strong>ISO &amp; installer gathering</strong>: collects scattered installers into one place</li>
+  <li><strong>Empty folders</strong></li>
+</ul>
+
+<h3>Requirements</h3>
+<p>macOS 14 (Sonoma) or later.</p>
+
+<h3>Two editions</h3>
+<table>
+  <tr><th></th><th>App Store edition</th><th>Free edition (inspect only)</th></tr>
+  <tr><td>Scan and review proposals</td><td>Yes</td><td>Yes</td></tr>
+  <tr><td>Export the list as CSV</td><td>Yes</td><td>Yes</td></tr>
+  <tr><td>Run (move to Trash / move)</td><td>Yes</td><td>No</td></tr>
+</table>
+<p>The free edition lets you see what the app would find on your disk first. It never touches your files.</p>
+
+<h3>FAQ</h3>
+
+<p><strong>Will my files be deleted?</strong><br>
+The app never deletes anything. “Trash” means moving items to the Trash, and they can be restored until you empty it. Moves happen only within the same disk and are recorded, so they can be undone.</p>
+
+<p><strong>I ran something by mistake</strong><br>
+Open History (the clock button at the top right of the window) and press Undo on that run. If one run covered several features, you can undo them feature by feature. Once the Trash has been emptied, items cannot be restored.</p>
+
+<p><strong>Free space didn't increase after running</strong><br>
+Moving items to the Trash does not free space. When you are sure, right-click the Trash in the Dock and choose Empty Trash; this also empties the Trash on external disks.</p>
+
+<p><strong>What happens on a network disk (NAS)?</strong><br>
+Network shares have no Trash, so the app creates a folder named “_スッキリポン ゴミ箱” at the top of the scanned location and moves items there. This can be undone. When you no longer need them, delete that folder yourself.</p>
+
+<p><strong>I want to change which duplicate is kept</strong><br>
+In the Review screen, right-click the file you want to keep and choose “Keep this one”. “Keep files in the same path” makes candidates in that folder the kept copy across every group at once. You can also change the rules (path length, dates, and so on) from “How to choose the kept copy…”.</p>
+
+<p><strong>Some duplicates start unchecked</strong><br>
+Files such as DLLs are normally kept in several copies, one per application, and removing them can break software. They start unchecked; check them only after confirming.</p>
+
+<p><strong>I don't want backups or car-navigation folders touched</strong><br>
+Add them under Protected folders in Settings. Anything inside a folder whose name contains that text is excluded from all proposals. “カーナビ” (car navigation) is included by default.</p>
+
+<p><strong>What does “Hi-Res label (actually CD-level)” mean?</strong><br>
+The file is labeled 24-bit/192 kHz or similar, but measurement shows its content reaches no higher than a CD does. Bigger numbers do not always mean better sound. The evidence button shows the measured graph. When there is nothing to compare against, the file is marked “Hi-Res label (unverified)” and starts unchecked.</p>
+
+<p><strong>It says “can't touch this: no permission”</strong><br>
+You don't have write permission for that item. Select it in Finder, choose Get Info, and check under Sharing &amp; Permissions that you have Read &amp; Write access.</p>
+
+<p><strong>Why are later scans faster?</strong><br>
+The app remembers the previous results and re-examines only files that changed.</p>
+
+<p><strong>What can the app see?</strong><br>
+Only the folders and disks you choose. The app runs in the App Sandbox and cannot reach anything else.</p>
+
+<p><strong>Is any data sent anywhere?</strong><br>
+No. The app performs no network communication at all. See the <a href="privacy.html#en">Privacy Policy</a>.</p>
+
+<footer>© 2026 半歩舎</footer>
+</body>
+</html>
