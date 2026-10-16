@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>メールポン！ サポート / MailPon! Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; padding: 2rem 1.25rem 4rem; max-width: 40rem; margin-inline: auto;
+         font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", "Noto Sans JP", sans-serif; }
+  h1 { font-size: 1.6rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.25rem; margin: 2.5rem 0 .75rem; padding-top: 1.5rem; border-top: 1px solid rgba(128,128,128,.35); }
+  h3 { font-size: 1rem; margin: 1.4rem 0 .25rem; }
+  p, li { margin: .4rem 0; }
+  nav { font-size: .9rem; margin-bottom: 1.5rem; }
+  .contact { padding: 1rem 1.2rem; border: 1px solid rgba(128,128,128,.35); border-radius: .75rem; margin: 1rem 0; }
+  footer { margin-top: 3rem; font-size: .85rem; opacity: .7; }
+</style>
+</head>
+<body>
+<h1>メールポン！ サポート</h1>
+<nav><a href="#en">English</a> · <a href="privacy.html">プライバシーポリシー</a> · <a href="../">Apps</a></nav>
+
+<div class="contact">
+  <strong>お問い合わせ・不具合の報告</strong><br>
+  GitHub の Issues にお書きください（GitHub アカウントが必要です）。<br>
+  <a href="https://github.com/Ryuuji-sakura/Ryuuji-sakura.github.io/issues/new">github.com/Ryuuji-sakura/Ryuuji-sakura.github.io/issues</a><br>
+  書いていただきたいこと: お使いの macOS のバージョン、メールのサービス（Gmail・iCloud・プロバイダなど）、何をしたときに何が起きたか。<br>
+  <strong>公開の場所なので、メールアドレス・パスワード・メールの内容は書かないでください。</strong>
+</div>
+
+<h3>メールポン！とは</h3>
+<p>あなたが「迷惑」「普通」と教えたメールから学習して、届いたメールを自動で迷惑メールフォルダへ振り分ける Mac のアプリです。メニューバーに常駐し、メールサーバー（IMAP）を数分ごとに確認します。サーバー側で振り分けるので、iPhone など他の端末の受信箱もきれいになります。Mac のメールの機能拡張としても動きます。</p>
+
+<h3>使い始め方</h3>
+<ol>
+  <li>メニューバーの封筒のアイコン →「設定…」→「購入」で「30 日間の無料試用を開始」を押します（無料です）。</li>
+  <li>「設定…」→「アカウント」で、メールアカウント（IMAP のサーバー名・ユーザー名・パスワード）を追加します。</li>
+  <li>「初期学習…」を押すと、サーバーの迷惑メールフォルダと受信箱から一度に学習します（メールは動かしません）。迷惑・普通それぞれ 20 通以上学習すると、判定が始まります。</li>
+  <li>あとは普段どおりメールを使うだけです。メールポン！が受信箱で確認したメールを、Mac のメールの迷惑メールボタンなどでサーバーの迷惑メールフォルダへ移すと迷惑として、迷惑メールフォルダから受信箱へ戻すと普通のメールとして、次の確認のときに学習します（メールポン！が起動している必要があります）。</li>
+  <li>（任意）Mac のメールでも振り分けたい場合は、メールの「設定」→「機能拡張」でメールポン！をオンにします。</li>
+</ol>
+
+<h3>必要な環境</h3>
+<p>macOS 15（Sequoia）以降。IMAP に対応したメールアカウント。</p>
+
+<h3>料金</h3>
+<p>App Store から無料でダウンロードできます。アプリ内で「30 日間の無料試用」を開始すると、30 日間すべての機能を使えます。試用が終わると、サーバーの確認（迷惑メールの振り分け、学習用フォルダや迷惑メールボタンからの学習）と「過去のメール…」、Mac のメールでの振り分けが止まります（学習データや設定は残ります）。続けて使うには、アプリ内で買い切り（1 回のお支払い）をご購入ください。自動で料金がかかることはありません。購入の復元は「設定」→「購入」からできます。</p>
+
+<h3>よくある質問</h3>
+
+<p><strong>Gmail・iCloud のパスワードが通らない</strong><br>
+Gmail は Google アカウントで発行する「アプリ パスワード」（2 段階認証が必要）、iCloud は Apple アカウントで発行する「App 用パスワード」を使ってください。サーバー名は Gmail が <code>imap.gmail.com</code>、iCloud が <code>imap.mail.me.com</code> です。</p>
+
+<p><strong>Mac のメールの迷惑メールボタンで学習させるには</strong><br>
+Mac のメールの「設定」→「迷惑メール」で、迷惑メールを「迷惑メール」メールボックスへ移動する設定にし、そのアカウントの迷惑メールボックスがサーバーの迷惑メールフォルダになっていることを確かめてください。メールポン！の「設定」→「一般」の「メールアプリでの迷惑メール操作から学習する」がオン（最初からオン）なら、次の確認のときに学習します。対象は、メールポン！がそれまでに受信箱で確認したメール（数日以上前のメールは確認の有無を問いません）です。すでに正しく判定できているメールは、学習し直しません。確実に教えたいときは、次の学習用フォルダを使ってください。</p>
+
+<p><strong>確実に教えたいときは</strong><br>
+サーバーに自動で作られる「MailPon / 迷惑として学習」フォルダに迷惑メールを、「MailPon / 正常として学習」フォルダに普通のメールを入れてください。次の確認のときに学習し、それぞれ迷惑メールフォルダ・受信箱へ移します。</p>
+
+<p><strong>普通のメールが迷惑メールフォルダに入ってしまった</strong><br>
+いちばん確実なのは「MailPon / 正常として学習」フォルダへ移すことです（学習して受信箱へ戻します）。受信箱へ戻すだけでも、多くの場合は次の確認のときに普通のメールとして学習します。差出人ごとに普通として扱いたいときは、「設定」→「ルール」で「常に正常」のルールを作るか、連絡先に登録してください（ただし、そのメール自体を迷惑として学習済みの場合は学習が優先されるので、「正常として学習」フォルダで教え直してください）。</p>
+
+<p><strong>前から受信箱にある迷惑メールも片付けたい</strong><br>
+「設定」→「アカウント」→「過去のメール…」で、受信箱の過去のメールを新しい順に調べられます。迷惑の可能性がとても高いものだけを「MailPon / 過去メールの迷惑候補」フォルダへ移します。削除はせず、自動で削除されることがある迷惑メールフォルダへも直接は移さないので、誤って判定されたメールは候補フォルダから受信箱へ戻せます。メールの移動（MOVE または UIDPLUS）に対応したサーバーで使えます。</p>
+
+<p><strong>メールの内容はどこかへ送られますか</strong><br>
+送られません。判定と学習はお使いの Mac の中で行い、メールのために通信するのは、あなたが登録したメールサーバーだけです（購入状態の確認などには Apple の App Store の仕組みを使います）。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+
+<p><strong>しばらく起動していなかったら Mac のメールでの振り分けが止まった</strong><br>
+購入済みの場合も、Mac のメールでの振り分けは、本体を起動するたびに 30 日ずつ延びる仕組みです。メールポン！を起動すれば再開します（ログイン時に自動で起動する設定にしておくと安心です）。</p>
+
+<h2 id="en">MailPon! Support</h2>
+
+<div class="contact">
+  <strong>Questions and bug reports</strong><br>
+  Please open a <a href="https://github.com/Ryuuji-sakura/Ryuuji-sakura.github.io/issues/new">GitHub Issue</a> (a GitHub account is required). Include your macOS version, your mail service, and what happened. <strong>Issues are public: never include email addresses, passwords or message content.</strong>
+</div>
+
+<h3>What is MailPon!?</h3>
+<p>A learning spam filter for the Mac. It learns from the messages you mark as spam or good, and automatically moves new spam to the junk folder. It lives in the menu bar and checks your mail server (IMAP) every few minutes, so filtering happens on the server and your iPhone’s inbox stays clean too. It also works as an Apple Mail extension. The app’s interface is in Japanese.</p>
+
+<h3>Getting started</h3>
+<ol>
+  <li>Menu bar envelope icon → Settings… → Purchase: press “Start 30-day free trial” (free).</li>
+  <li>Settings… → Accounts: add your mail account (IMAP server, user name, password).</li>
+  <li>Press “Initial training…” to learn from the server’s junk folder and inbox at once (no messages are moved). Classification starts after at least 20 spam and 20 good messages have been learned.</li>
+  <li>Then just use your mail as usual. When a message the app has already seen in the inbox is moved to the server’s junk folder (for example with Apple Mail’s Junk button), it is learned as spam at the next check; moving it back from the junk folder to the inbox teaches it as good (the app must be running). For certain corrections, use the “MailPon / 迷惑として学習” (spam) and “MailPon / 正常として学習” (good) folders.</li>
+  <li>(Optional) To filter in Apple Mail too, turn MailPon! on in Mail → Settings → Extensions.</li>
+</ol>
+
+<h3>Requirements</h3>
+<p>macOS 15 Sequoia or later, and an IMAP mail account.</p>
+
+<h3>Pricing</h3>
+<p>Free to download. Start the 30-day free trial in the app to use every feature for 30 days. When the trial ends, server checks (filtering and learning from folders or the Junk button), “Past mail…” and filtering in Apple Mail stop (training data and settings are kept). To keep using it, buy the one-time unlock in the app. You are never charged automatically. Restore purchases from Settings → Purchase.</p>
+
+<h3>Privacy</h3>
+<p>Your mail is never sent anywhere. Classification happens on your Mac; for mail, the app talks only to the mail servers you register (purchase status is checked through Apple’s App Store). See the <a href="privacy.html#en">Privacy Policy</a>.</p>
+
+<footer>© 2026 半歩舎</footer>
+</body>
+</html>
