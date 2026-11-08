@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>空フォルダ削除 サポート / Empty Folder Cleaner Support</title>
+<title>空フォルダ削除 サポート / Empty Folder Sweeper Support</title>
 <style>
   :root { color-scheme: light dark; }
   body { margin: 0; padding: 2rem 1.25rem 4rem; max-width: 40rem; margin-inline: auto;
@@ -32,7 +32,7 @@
 <p>選んだフォルダの中から、中身が空のフォルダを探してまとめて片付ける Mac アプリです。入れ子になっていても、いちばん奥まで一度で見つけます。見つかったものは一覧に出るので、消したくないものはチェックを外してから実行できます。</p>
 
 <h3>必要な環境</h3>
-<p>macOS 14（Sonoma）以降。</p>
+<p>macOS 14（Sonoma）以降。画面は日本語と英語に対応していて、Mac の「優先する言語」に合わせて切り替わります。英語では「Empty Folder Sweeper」という名前で表示されます。</p>
 
 <h3>よくある質問</h3>
 
@@ -72,7 +72,7 @@ NAS やクラウド同期で名前が変わったものも対象にしますが�
 <p><strong>データはどこかに送信されますか</strong><br>
 送信しません。このアプリは一切の通信を行いません。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
 
-<h2 id="en">Empty Folder Cleaner Support</h2>
+<h2 id="en">Empty Folder Sweeper Support</h2>
 
 <div class="contact">
   <strong>Contact / bug reports</strong><br>
@@ -81,11 +81,11 @@ NAS やクラウド同期で名前が変わったものも対象にしますが�
   Please include your Mac model, macOS version, and what you were doing when the problem happened.
 </div>
 
-<h3>What is Empty Folder Cleaner?</h3>
-<p>A Mac app that finds empty folders inside a folder you choose and clears them out together. Nested empty folders are found all the way down in a single pass. Everything found is listed, so you can uncheck anything you want to keep before deleting. The app's interface is in Japanese.</p>
+<h3>What is Empty Folder Sweeper?</h3>
+<p>A Mac app that finds empty folders inside a folder you choose and clears them out together. Nested empty folders are found all the way down in a single pass. Everything found is listed, so you can uncheck anything you want to keep before deleting. The interface is available in Japanese and English.</p>
 
 <h3>Requirements</h3>
-<p>macOS 14 (Sonoma) or later.</p>
+<p>macOS 14 (Sonoma) or later. The interface follows your Mac's preferred languages (Japanese or English). In Japanese the app is called “空フォルダ削除”.</p>
 
 <h3>FAQ</h3>
 
@@ -93,7 +93,7 @@ NAS やクラウド同期で名前が変わったものも対象にしますが�
 If there is even one real file anywhere beneath a folder, that folder is not treated as empty. The app also never descends into hidden folders (such as <code>.git</code>) or packages (<code>.app</code>, photo libraries, <code>.xcodeproj</code>), even if they contain empty folders inside — deleting those would break the enclosing app or repository.</p>
 
 <p><strong>A folder looks empty in Finder but isn't offered</strong><br>
-It probably contains an invisible <code>.DS_Store</code> file. Check that the “treat folders containing only a Finder settings file as empty” option is on (it is by default). If it still isn't offered, there is a real file deeper in the tree.</p>
+It probably contains an invisible <code>.DS_Store</code> file. Check that “Also delete folders that contain only a Finder settings file” is on (it is by default). If it still isn't offered, there is a real file deeper in the tree.</p>
 
 <p><strong>What is the “Finder settings file”?</strong><br>
 It is <code>.DS_Store</code>, an invisible file Finder creates to remember a folder's sort order, window size, and icon positions. Deleting it does not affect folder names or the files inside.</p>
@@ -108,13 +108,13 @@ No. Only empty folders inside it are deleted.</p>
 By default items go to the Trash. Right-click in the Trash and choose “Put Back” to restore them. A run of nested empty folders goes to the Trash as one item, so it comes back with its structure intact.</p>
 
 <p><strong>How is “delete permanently” different?</strong><br>
-Turning off “move deleted items to the Trash” deletes without using the Trash, and it <strong>cannot be undone</strong>. In that mode the button turns red and the confirmation dialog deliberately has no default button, so the Return key cannot trigger it — you have to click.</p>
+Turning off “Move deleted items to the Trash” deletes without using the Trash, and it <strong>cannot be undone</strong>. In that mode the button turns red and the confirmation dialog deliberately has no default button, so the Return key cannot trigger it — you have to click.</p>
 
 <p><strong>Scanning a large folder takes a long time</strong><br>
 Large locations such as your home folder take a while. Progress is shown as a live item count, and you can stop at any time with the Stop button (or ⌘.).</p>
 
 <p><strong>If I stop, do I keep the partial results?</strong><br>
-No. When a scan is stopped part way, there may be files in places it never reached, so folders that merely <em>looked</em> empty must not be offered for deletion. Everything gathered so far is discarded. Use “Scan again” to restart.</p>
+No. When a scan is stopped part way, there may be files in places it never reached, so folders that merely <em>looked</em> empty must not be offered for deletion. Everything gathered so far is discarded. Use “Scan Again” to restart.</p>
 
 <p><strong>Are files named like “.DS_Store 12-34-56” deleted too?</strong><br>
 Variant names left by NAS or cloud sync are handled, but never on the strength of the name alone. The file's contents are checked, so only real Finder metadata is removed — a file you named yourself starting with <code>.DS_Store</code> is never touched.</p>
