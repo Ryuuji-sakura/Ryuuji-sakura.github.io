@@ -20,7 +20,7 @@
 </head>
 <body>
 <h1>メールポン！ プライバシーポリシー</h1>
-<p class="date">最終更新: 2026年10月16日</p>
+<p class="date">最終更新: 2026年11月20日</p>
 <nav><a href="#en">English</a> · <a href="./">サポート</a> · <a href="../">Apps</a></nav>
 
 <p>メールポン！（以下「本アプリ」）は、半歩舎（Ryuuji Hara）が開発・配布する Mac 用の迷惑メールフィルタです。迷惑メールの判定と学習はすべてお使いの Mac の中で行い、メールの内容や個人情報を開発者や第三者に送信することはありません。</p>
@@ -32,7 +32,7 @@
   <li><strong>メールの処理状況</strong>: どこまで判定したかを覚えるためのサーバー上の番号（UID）と、迷惑メールフォルダへの出し入れを見分けるためのメールの識別子（90 日を過ぎると定期的な整理のときに消します）。</li>
   <li><strong>判定の記録（ログ）</strong>: 判定したメールの差出人・件名・スコア・日時。画面の「ログ」に表示するためのものです（新しいものから最大 5,000 件）。</li>
   <li><strong>アカウント設定</strong>: メールサーバー名、ポート、ユーザー名、フォルダ名。<strong>パスワードは macOS のキーチェーンに保存</strong>します。</li>
-  <li><strong>連絡先のメールアドレス</strong>: 利用者が許可した場合だけ、連絡先に登録された相手からのメールを迷惑と判定しないために（そのメール自体を迷惑として学習させた場合を除く）、連絡先のメールアドレスを読み取って保存します。あとで許可を取り消しても、保存済みのアドレスは自動では消えません（下の「データの削除」をご覧ください）。</li>
+  <li><strong>連絡先のメールアドレス</strong>: 「設定」→「一般」の「連絡先に登録された相手からのメールは迷惑メールにしない」を利用者がオンにし、連絡先へのアクセスを許可した場合だけ、連絡先に登録された相手からのメールを迷惑と判定しないために（そのメール自体を迷惑として学習させた場合を除く）、連絡先のメールアドレスを読み取ってこの Mac の中に保存します。最初は無効で（以前の版ですでに連絡先へのアクセスを許可していた場合を除く）、起動時に許可を求めることはありません。連絡先のアドレスはどこにも送信しません。設定をオフにするか、システム設定で許可を取り消すと、次の確認までに利用をやめ、保存したアドレスを消します（万一消せなかった場合も、判定には使いません）。</li>
   <li><strong>ルールと設定</strong>: 利用者が作った「常に正常」「常に迷惑」のルール、判定のしきい値などの設定値。</li>
 </ul>
 
@@ -66,7 +66,7 @@
 <p>本ポリシーを変更する場合は、このページで公開します。</p>
 
 <h2 id="en">MailPon! Privacy Policy</h2>
-<p class="date">Last updated: October 16, 2026</p>
+<p class="date">Last updated: November 20, 2026</p>
 
 <p>MailPon! (“the app”) is a spam filter for the Mac developed and distributed by 半歩舎 (Ryuuji Hara). All classification and learning happen on your Mac; your email and personal information are never sent to the developer or to any third party.</p>
 
@@ -77,7 +77,7 @@
   <li><strong>Processing state</strong>: server message numbers (UIDs) recording how far the app has checked, and message identifiers used to notice moves in and out of the junk folder (removed during periodic cleanup after 90 days).</li>
   <li><strong>Classification log</strong>: sender, subject, score and time of classified messages, shown in the app’s Log (up to the newest 5,000 entries).</li>
   <li><strong>Account settings</strong>: server name, port, user name and folder names. <strong>Passwords are stored in the macOS keychain.</strong></li>
-  <li><strong>Contact email addresses</strong>: only if you allow it, email addresses from Contacts are read and stored so that mail from your contacts is not classified as spam (unless you trained that message itself as spam). Revoking the permission later does not automatically delete the stored addresses (see “Deleting your data”).</li>
+  <li><strong>Contact email addresses</strong>: only if you turn on Settings → General → “Do not mark mail from people in my contacts as spam” and allow Contacts access, email addresses from Contacts are read and stored on this Mac so that mail from your contacts is not classified as spam (unless you trained that message itself as spam). The setting is off at first (unless Contacts access was already granted to an earlier version), and the app never asks for Contacts access at launch. Contact addresses are never sent anywhere. If you turn the setting off or revoke Contacts access in System Settings, the app stops using them by its next check and deletes the stored addresses (if deletion ever fails, they are still not used).</li>
   <li><strong>Rules and settings</strong>: your “always good / always spam” rules, the threshold and other settings.</li>
 </ul>
 
