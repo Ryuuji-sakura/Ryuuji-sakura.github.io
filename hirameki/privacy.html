@@ -19,7 +19,7 @@
 </head>
 <body>
 <h1 id="ja">ひらめき プライバシーポリシー</h1>
-<p class="date">最終更新: 2026年11月14日</p>
+<p class="date">最終更新: 2026年11月27日</p>
 <!-- nav:start --><nav><a href="#ja">日本語</a> · <a href="#en">English</a> · <a href="#ko" lang="ko">한국어</a> · <a href="#zh-Hans" lang="zh-Hans">简体中文</a> · <a href="#zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="#de" lang="de">Deutsch</a> · <a href="#es" lang="es">Español</a> · <a href="#fr" lang="fr">Français</a> · <a href="#it" lang="it">Italiano</a> · <a href="#pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="#ru" lang="ru">Русский</a> · <a href="#tr" lang="tr">Türkçe</a> · <a href="#nl" lang="nl">Nederlands</a> · <a href="#da" lang="da">Dansk</a> · <a href="#th" lang="th">ไทย</a> · <a href="#vi" lang="vi">Tiếng Việt</a> · <a href="#ms" lang="ms">Bahasa Melayu</a><br><a href="index.html">Support</a> · <a href="../">Apps</a></nav><!-- nav:end -->
 
 <p>ひらめき（以下「本アプリ」）は、半歩舎が開発・配布する iPhone 用のメモアプリです。Siri や相棒（猫・犬・フクロウ）に話したひらめきを保存し、整理します。預けたひらめきや個人情報を、開発者に送信することはありません。広告・解析のサービスも使いません。開発者のサーバーはありません。</p>
@@ -31,6 +31,10 @@
   <li>設定など: 選んだ相棒、最初に選んだ相棒、ひらめきプラスを購入済みかどうかとその期限、iCloud 同期の状態（同期したアカウントの識別子、同期の進み具合）。</li>
   <li>削除の記録: 「完全に削除」したひらめきについて、ほかの端末から古いコピーが戻らないよう、識別のための番号と削除した日時だけを残します（本文は残しません）。</li>
   <li>音声: 「相棒に話す」で話した声は、端末の中の音声認識で文字にします。録音ファイルは保存しません。</li>
+  <li>「やった」と通知: 「やった」にした日時と、通知の日時。ひらめきと一緒に保存し、iCloud 同期を使っていれば同期します。</li>
+  <li>下書き: 「相棒に話す」の画面にある文字（話した言葉や、手で直した文字）と、買い物かどうか、付け足す先のメモの識別番号。端末の中のアプリの設定の場所に置き、iCloud では同期しません（端末のバックアップには含まれることがあります）。「預ける」で保存できたときか「戻した言葉を消す」を押したときに消えます。最後に残してから7日を過ぎた下書きは、次に「相棒に話す」を開いたときに戻さずに消します。</li>
+  <li>意味で探すの索引: 「意味で探す」のデータを取り込んだ場合、ひらめきごとに、本文から作った数値の並び（意味を比べるためのもの）と、本文が変わったかを見分ける短い値を、端末の中に保存します。同期もバックアップもしません。</li>
+<!-- v1.5 -->
 </ul>
 
 <h3>保存される場所と同期</h3>
@@ -51,6 +55,12 @@
 <h3>端末内AI</h3>
 <p>Apple Intelligence に対応した端末では、Apple の端末内のモデル（Foundation Models）で、ひらめきの見出し・分類・要約を作ります。処理は端末の中で行い、本アプリから外部に送信しません。</p>
 
+<h3>通知</h3>
+<p>ベルのボタンで設定した通知は、端末の中で予約する通知で、開発者のサーバーを通りません。通知にはひらめきの題名（最大60文字）が出ます。ロック画面で中身を出すかどうかは、iOS の通知の設定に従います。iCloud で同期しているほかの端末にも通知の日時が同期され、その端末で通知を許可していれば、その端末でも予約して知らせます（同期の遅れや、端末ごとに近い順で50件までという予約の上限によって、知らせないことがあります）。</p>
+
+<h3>意味で探す</h3>
+<p>「意味で探す」は、公開されている言語モデル multilingual-e5-small（MIT ライセンス）を端末用に変換したデータを使います。データは、利用者が「取り込む」を押したときだけ App Store から受け取り（約93MB）、端末の中に置きます（バックアップの対象外）。探すときも索引を作るときも処理は端末の中だけで、ひらめきの本文や検索の言葉を外部に送りません。</p>
+
 <h3>通信について</h3>
 <p>本アプリが自動で通信するのは、次の Apple のサービスだけです。</p>
 <ul>
@@ -58,6 +68,8 @@
   <li>App Store（StoreKit）: 「ひらめきプラス」の購入・購入の復元・購入状態の確認。お支払いの情報を本アプリが受け取ることはありません。</li>
 </ul>
 <p>これらは Apple のプライバシーポリシーに従って処理されます。本アプリへの会員登録は不要です。利用者がリンクを押したときに限り、利用規約・このページ・Apple の「ショートカット」アプリを開きます。</p>
+
+<p>このほか、利用者が「意味で探す」のデータを取り込むと決めたときだけ、App Store からそのデータを受け取ります。</p>
 
 <h3>収集しない情報</h3>
 <ul>
@@ -74,6 +86,7 @@
   <li>本アプリを削除すると、端末内のデータは消えます。iCloud に残ったデータは、iOS の「設定」→ 利用者の名前 →「iCloud」→「ストレージを管理」（または「アカウントのストレージを管理」）から、ひらめきのデータを削除できます。iCloud のデータを削除しても、端末に残っているひらめきは消えません。</li>
   <li>書き出した TXT・JSON のファイルは本アプリの外にあるので、保存した場所で削除してください。</li>
   <li>App Store での購入履歴は Apple が管理しています。</li>
+  <li>「意味で探す」のデータと索引は、設定の「意味で探すのデータを削除する」で消えます（ひらめきは残ります）。</li>
 </ul>
 
 <h3>お問い合わせ</h3>
@@ -84,7 +97,7 @@
 
 <div lang="en">
 <h2 id="en">Hirameki Privacy Policy</h2>
-<p class="date">Last updated: November 14, 2026</p>
+<p class="date">Last updated: November 27, 2026</p>
 
 <p>Hirameki (“the app”) is an iPhone note app developed and distributed by 半歩舎 (Hanposha). It saves and organizes the ideas you tell Siri or your buddy (a cat, dog or owl). The ideas and personal information you save are never sent to the developer, and no advertising or analytics services are used. There is no developer server.</p>
 
@@ -95,6 +108,10 @@
   <li>Settings and similar: the buddy you chose, the buddy you chose first, whether you have Hirameki Plus and until when, and the iCloud sync state (an identifier of the account synced with, and sync progress).</li>
   <li>Deletion record: for ideas you “Delete Forever”, only an identifying number and the time of deletion are kept, so that an old copy on another device cannot bring them back (the text is not kept).</li>
   <li>Voice: what you say with “Talk to My Buddy” is turned into text by on-device speech recognition. No recordings are saved.</li>
+  <li>Done and reminders: when you marked an idea done, and its reminder time. These are saved with the idea and synced if you use iCloud sync.</li>
+  <li>Draft: the text on the “Talk to My Buddy” screen (what you said and anything you typed or edited), whether it was for the shopping list, and the identifier of the idea it was being added to. Kept in the app’s settings storage on the device and not synced through iCloud (it may be included in your device backup). It is removed when “Give” saves it or when you tap “Clear Those Words”. A draft older than 7 days since it was last kept is dropped, not restored, the next time you open “Talk to My Buddy”.</li>
+  <li>Search by Meaning index: if you downloaded the Search by Meaning data, for each idea the app keeps on the device a list of numbers made from its text (used to compare meanings) and a short value that tells whether the text has changed. It is neither synced nor backed up.</li>
+<!-- v1.5 -->
 </ul>
 
 <h3>Where data is stored and synced</h3>
@@ -115,6 +132,12 @@
 <h3>On-device AI</h3>
 <p>On devices that support Apple Intelligence, Apple’s on-device model (Foundation Models) writes a title, category and summary for your ideas. This runs on the device; the app sends nothing out for it.</p>
 
+<h3>Notifications</h3>
+<p>Reminders you set with the bell are scheduled on the device and never go through a developer server. A reminder shows the idea’s title (up to 60 characters). Whether its content appears on the Lock Screen follows your iOS notification settings. The reminder time also syncs to your other devices through iCloud, and each device schedules the reminder itself if notifications are allowed on it (a sync delay, or the limit of the 50 nearest reminders per device, can keep one from appearing).</p>
+
+<h3>Search by Meaning</h3>
+<p>Search by Meaning uses data converted for the device from the public language model multilingual-e5-small (MIT License). The data (about 93 MB) is received from the App Store only when you tap “Download”, and is kept on the device (excluded from backups). Searching and building the index both run only on the device; the text of your ideas and your search words are never sent out.</p>
+
 <h3>Network</h3>
 <p>The only services the app contacts automatically are the following Apple services.</p>
 <ul>
@@ -122,6 +145,8 @@
   <li>App Store (StoreKit): buying Hirameki Plus, restoring purchases and checking purchase status. Payment information is never received by the app.</li>
 </ul>
 <p>These are processed under Apple’s privacy policy. No sign-up is required. Only when you tap a link does the app open the Terms of Use, this page, or Apple’s Shortcuts app.</p>
+
+<p>In addition, only when you choose to download the Search by Meaning data does the app receive that data from the App Store.</p>
 
 <h3>Information the app does not collect</h3>
 <ul>
@@ -138,6 +163,7 @@
   <li>Deleting the app removes the data on the device. Data remaining in iCloud can be deleted from Settings → your name → iCloud → Manage Storage (or Manage Account Storage) → Hirameki. Deleting the iCloud data does not delete the ideas still on your devices.</li>
   <li>TXT and JSON files you exported are outside the app; delete them where you saved them.</li>
   <li>Your App Store purchase history is managed by Apple.</li>
+  <li>The Search by Meaning data and index are removed with “Delete Search by Meaning Data” in settings (your ideas stay).</li>
 </ul>
 
 <h3>Contact</h3>
@@ -151,7 +177,7 @@
 <!-- langs:start -->
 <div lang="ko">
 <h2 id="ko">Hirameki 개인정보 처리방침</h2>
-<p class="date">최종 업데이트: 2026년 11월 14일</p>
+<p class="date">최종 업데이트: 2026년 11월 27일</p>
 
 <p>Hirameki(이하 “앱”)는 半歩舎(Hanposha)가 개발·배포하는 iPhone용 메모 앱입니다. Siri나 친구(고양이, 강아지 또는 부엉이)에게 말한 아이디어를 저장하고 정리합니다. 저장한 아이디어와 개인정보는 개발자에게 전송되지 않으며, 광고나 분석 서비스는 사용하지 않습니다. 개발자의 서버는 없습니다.</p>
 
@@ -162,6 +188,10 @@
   <li>설정 등: 선택한 친구, 처음 선택한 친구, Hirameki Plus 이용 여부와 이용 기한, iCloud 동기화 상태(동기화한 계정의 식별자와 동기화 진행 상황).</li>
   <li>삭제 기록: “영구 삭제”한 아이디어는 다른 기기에 남아 있는 이전 사본으로 인해 되살아나지 않도록, 식별 번호와 삭제 일시만 보관합니다(본문은 보관하지 않습니다).</li>
   <li>음성: “친구에게 말하기”로 말한 내용은 기기 내 음성 인식으로 텍스트로 변환됩니다. 녹음은 저장하지 않습니다.</li>
+  <li>완료와 알림: 아이디어를 완료로 표시한 일시와 알림 일시. 아이디어와 함께 저장되며, iCloud 동기화를 사용하면 동기화됩니다.</li>
+  <li>초안: “친구에게 말하기” 화면의 글(말한 내용과 직접 입력하거나 고친 글), 쇼핑 목록용인지 여부, 덧붙일 대상 아이디어의 식별 번호. 기기 안의 앱 설정 저장 공간에 두며 iCloud로는 동기화하지 않습니다(기기 백업에는 포함될 수 있습니다). “맡기기”로 저장되었을 때 또는 “되살린 말 지우기”를 탭했을 때 지워집니다. 마지막으로 남긴 때부터 7일이 지난 초안은 다음에 “친구에게 말하기”를 열 때 되살리지 않고 삭제합니다.</li>
+  <li>의미로 검색 색인: 의미로 검색 데이터를 받은 경우, 아이디어마다 본문으로 만든 숫자 목록(의미를 비교하는 데 사용)과 본문이 바뀌었는지 판별하는 짧은 값을 기기 안에 저장합니다. 동기화도 백업도 하지 않습니다.</li>
+<!-- v1.5 -->
 </ul>
 
 <h3>데이터의 저장 및 동기화 위치</h3>
@@ -182,6 +212,12 @@
 <h3>기기 내 AI</h3>
 <p>Apple Intelligence를 지원하는 기기에서는 Apple의 기기 내 모델(Foundation Models)이 아이디어의 제목, 카테고리, 요약을 작성합니다. 이 처리는 기기 안에서 이루어지며, 앱은 이를 위해 아무것도 외부로 전송하지 않습니다.</p>
 
+<h3>알림</h3>
+<p>종 버튼으로 설정한 알림은 기기 안에서 예약되며, 개발자의 서버를 거치지 않습니다. 알림에는 아이디어의 제목(최대 60자)이 표시됩니다. 잠금 화면에 내용을 표시할지는 iOS 알림 설정을 따릅니다. 알림 시간은 iCloud를 통해 다른 기기에도 동기화되며, 각 기기에서 알림을 허용했다면 그 기기에서도 직접 예약해 알려 드립니다(동기화 지연이나 기기마다 가까운 순으로 50개까지라는 예약 한도 때문에 알리지 못할 수 있습니다).</p>
+
+<h3>의미로 검색</h3>
+<p>의미로 검색은 공개된 언어 모델 multilingual-e5-small(MIT 라이선스)을 기기용으로 변환한 데이터를 사용합니다. 데이터(약 93 MB)는 사용자가 “받기”를 탭했을 때만 App Store에서 받으며, 기기 안에 보관됩니다(백업 대상에서 제외). 검색과 색인 생성 모두 기기 안에서만 처리되며, 아이디어 본문과 검색어는 외부로 보내지 않습니다.</p>
+
 <h3>네트워크</h3>
 <p>앱이 자동으로 접속하는 서비스는 다음 Apple 서비스뿐입니다.</p>
 <ul>
@@ -189,6 +225,8 @@
   <li>App Store(StoreKit): Hirameki Plus 구입, 구입 항목 복원 및 구입 상태 확인. 앱은 결제 정보를 받지 않습니다.</li>
 </ul>
 <p>이 서비스들은 Apple의 개인정보 처리방침에 따라 처리됩니다. 회원 가입은 필요하지 않습니다. 링크를 탭했을 때에만 앱이 이용 약관, 이 페이지 또는 Apple의 단축어 앱을 엽니다.</p>
+
+<p>이 밖에 사용자가 의미로 검색 데이터를 받기로 선택한 경우에만 App Store에서 해당 데이터를 받습니다.</p>
 
 <h3>앱이 수집하지 않는 정보</h3>
 <ul>
@@ -205,6 +243,7 @@
   <li>앱을 삭제하면 기기의 데이터가 삭제됩니다. iCloud에 남은 데이터는 설정 → 사용자 이름 → iCloud → 저장 공간 관리(또는 계정 저장 공간 관리) → Hirameki에서 삭제할 수 있습니다. iCloud 데이터를 삭제해도 기기에 남아 있는 아이디어는 삭제되지 않습니다.</li>
   <li>내보낸 TXT 및 JSON 파일은 앱 외부에 있으므로, 저장한 위치에서 삭제하세요.</li>
   <li>App Store 구입 내역은 Apple이 관리합니다.</li>
+  <li>의미로 검색 데이터와 색인은 설정의 “의미로 검색 데이터 삭제”로 지워집니다(아이디어는 남습니다).</li>
 </ul>
 
 <h3>문의</h3>
@@ -216,7 +255,7 @@
 
 <div lang="zh-Hans">
 <h2 id="zh-Hans">Hirameki隐私政策</h2>
-<p class="date">最后更新：2026年11月14日</p>
+<p class="date">最后更新：2026年11月27日</p>
 
 <p>Hirameki（以下简称“本App”）是由半歩舎（Hanposha）开发和发布的iPhone备忘录App。它会保存并整理你告诉Siri或伙伴（猫、狗或猫头鹰）的灵感。你保存的灵感和个人信息绝不会发送给开发者，也不使用任何广告或分析服务。开发者没有服务器。</p>
 
@@ -227,6 +266,10 @@
   <li>设置等：你选择的伙伴、你最初选择的伙伴、是否拥有Hirameki Plus及有效期限，以及iCloud同步状态（所同步账户的标识符和同步进度）。</li>
   <li>删除记录：对于执行“永久删除”的灵感，仅保留识别编号和删除时间，以防其他设备上的旧副本使其恢复（不保留正文）。</li>
   <li>语音：你通过“和伙伴说话”说出的内容，会由设备端语音识别转为文字。不保存录音。</li>
+  <li>完成与提醒：将灵感标记为完成的日期时间，以及提醒的日期时间。它们与灵感一起保存，如果使用 iCloud 同步则会同步。</li>
+  <li>草稿：“和伙伴说话”界面上的文字（您说的话，以及您输入或修改的文字）、是否用于购物清单，以及要追加到的灵感的标识符。保存在设备上应用的设置存储中，不通过 iCloud 同步（可能包含在设备备份中）。通过“交给你”保存成功时，或轻点“清除恢复的文字”时即删除。自最后一次保留起超过 7 天的草稿，会在下次打开“和伙伴说话”时直接删除，不会找回。</li>
+  <li>按语义搜索的索引：如果您下载了按语义搜索的数据，应用会为每条灵感在设备上保存一组由正文生成的数值（用于比较语义），以及一个用于判断正文是否已更改的简短值。既不同步，也不备份。</li>
+<!-- v1.5 -->
 </ul>
 
 <h3>数据的存储与同步位置</h3>
@@ -247,6 +290,12 @@
 <h3>设备端AI</h3>
 <p>在支持Apple Intelligence的设备上，Apple的设备端模型（Foundation Models）会为你的灵感撰写标题、分类和摘要。这在设备上运行；本App不会为此向外发送任何内容。</p>
 
+<h3>通知</h3>
+<p>通过铃铛按钮设置的提醒是在设备上安排的通知，不经过开发者的服务器。提醒会显示灵感的标题（最多 60 个字符）。是否在锁定屏幕上显示内容，取决于您的 iOS 通知设置。提醒时间也会通过 iCloud 同步到您的其他设备；如果该设备允许了通知，该设备也会自行安排并提醒您（由于同步延迟，或每台设备最多只安排时间上最接近的 50 条提醒，提醒可能不会出现）。</p>
+
+<h3>按语义搜索</h3>
+<p>按语义搜索使用由公开语言模型 multilingual-e5-small（MIT 许可证）为设备转换而成的数据。这些数据（约 93 MB）仅在您轻点“下载”时从 App Store 接收，并保存在设备上（不包含在备份中）。搜索和建立索引都只在设备上进行，灵感的正文和搜索词绝不会发送到外部。</p>
+
 <h3>网络</h3>
 <p>本App自动连接的服务仅限以下Apple服务。</p>
 <ul>
@@ -254,6 +303,8 @@
   <li>App Store（StoreKit）：购买Hirameki Plus、恢复购买及检查购买状态。本App绝不会接收付款信息。</li>
 </ul>
 <p>以上服务均依据Apple的隐私政策处理。无需注册。仅当你轻点链接时，本App才会打开使用条款、本页面或Apple的“快捷指令”App。</p>
+
+<p>此外，仅在您选择下载按语义搜索的数据时，应用才会从 App Store 接收这些数据。</p>
 
 <h3>本App不收集的信息</h3>
 <ul>
@@ -270,6 +321,7 @@
   <li>删除本App会移除设备上的数据。iCloud中剩余的数据，可在“设置”→你的姓名→“iCloud”→“管理储存空间”（或“管理账户储存空间”）→“Hirameki”中删除。删除iCloud数据不会删除仍在你设备上的灵感。</li>
   <li>你导出的TXT和JSON文件位于本App之外，请在你保存它们的位置删除。</li>
   <li>你的App Store购买记录由Apple管理。</li>
+  <li>在设置中使用“删除按语义搜索的数据”，即可删除按语义搜索的数据和索引（灵感会保留）。</li>
 </ul>
 
 <h3>联系方式</h3>
@@ -281,7 +333,7 @@
 
 <div lang="zh-Hant">
 <h2 id="zh-Hant">Hirameki 隱私權政策</h2>
-<p class="date">最後更新：2026 年 11 月 14 日</p>
+<p class="date">最後更新：2026 年 11 月 27 日</p>
 
 <p>Hirameki（以下稱「本 App」）是由半歩舎（Hanposha）開發與發行的 iPhone 備忘錄 App。它會儲存並整理你告訴 Siri 或夥伴（貓、狗或貓頭鷹）的靈感。你儲存的靈感與個人資料絕不會傳送給開發者，也不使用任何廣告或分析服務。開發者沒有伺服器。</p>
 
@@ -292,6 +344,10 @@
   <li>設定等：你選擇的夥伴、你最初選擇的夥伴、是否擁有 Hirameki Plus 及其期限，以及 iCloud 同步狀態（所同步帳號的識別碼與同步進度）。</li>
   <li>刪除紀錄：對於「永久刪除」的靈感，僅保留識別編號與刪除時間，以免其他裝置上的舊副本使其復原（不保留內文）。</li>
   <li>語音：你透過「和夥伴說話」說出的內容，會由裝置端語音辨識轉為文字。不會儲存錄音。</li>
+  <li>完成與提醒：將靈感標記為完成的日期時間，以及提醒的日期時間。它們與靈感一起儲存，如果使用 iCloud 同步則會同步。</li>
+  <li>草稿：「和夥伴說話」畫面上的文字（您說的話，以及您輸入或修改的文字）、是否用於購物清單，以及要追加到的靈感的識別碼。儲存在裝置上 App 的設定儲存空間中，不透過 iCloud 同步（可能包含在裝置備份中）。透過「交給夥伴」儲存成功時，或輕點「清除找回的文字」時即刪除。自最後一次保留起超過 7 天的草稿，會在下次開啟「和夥伴說話」時直接刪除，不會找回。</li>
+  <li>以語意搜尋的索引：如果您下載了以語意搜尋的資料，App 會為每則靈感在裝置上儲存一組由內文產生的數值（用於比較語意），以及一個用於判斷內文是否已變更的簡短值。既不同步，也不備份。</li>
+<!-- v1.5 -->
 </ul>
 
 <h3>資料的儲存與同步位置</h3>
@@ -312,6 +368,12 @@
 <h3>裝置端 AI</h3>
 <p>在支援 Apple Intelligence 的裝置上，Apple 的裝置端模型（Foundation Models）會為你的靈感撰寫標題、分類與摘要。這會在裝置上執行；本 App 不會為此向外傳送任何內容。</p>
 
+<h3>通知</h3>
+<p>透過鈴鐺按鈕設定的提醒是在裝置上排定的通知，不經過開發者的伺服器。提醒會顯示靈感的標題（最多 60 個字元）。是否在鎖定畫面上顯示內容，取決於您的 iOS 通知設定。提醒時間也會透過 iCloud 同步到您的其他裝置；如果該裝置允許了通知，該裝置也會自行排定並提醒您（由於同步延遲，或每台裝置最多只排定時間上最接近的 50 則提醒，提醒可能不會出現）。</p>
+
+<h3>以語意搜尋</h3>
+<p>以語意搜尋使用由公開語言模型 multilingual-e5-small（MIT 授權）為裝置轉換而成的資料。這些資料（約 93 MB）僅在您輕點「下載」時從 App Store 接收，並儲存在裝置上（不包含在備份中）。搜尋和建立索引都只在裝置上進行，靈感的內文和搜尋詞絕不會傳送到外部。</p>
+
 <h3>網路</h3>
 <p>本 App 自動連線的服務僅限以下 Apple 服務。</p>
 <ul>
@@ -319,6 +381,8 @@
   <li>App Store（StoreKit）：購買 Hirameki Plus、回復購買項目及確認購買狀態。本 App 絕不會接收付款資訊。</li>
 </ul>
 <p>這些服務均依 Apple 的隱私權政策處理。不需要註冊。只有在你點一下連結時，本 App 才會開啟使用條款、本頁面或 Apple 的「捷徑」App。</p>
+
+<p>此外，僅在您選擇下載以語意搜尋的資料時，App 才會從 App Store 接收這些資料。</p>
 
 <h3>本 App 不會蒐集的資訊</h3>
 <ul>
@@ -335,6 +399,7 @@
   <li>刪除本 App 會移除裝置上的資料。iCloud 中剩餘的資料，可在「設定」→你的名稱→「iCloud」→「管理儲存空間」（或「管理帳號儲存空間」）→「Hirameki」中刪除。刪除 iCloud 資料不會刪除仍在你裝置上的靈感。</li>
   <li>你匯出的 TXT 與 JSON 檔案位於本 App 之外，請在你儲存它們的位置刪除。</li>
   <li>你的 App Store 購買紀錄由 Apple 管理。</li>
+  <li>在設定中使用「刪除以語意搜尋的資料」，即可刪除以語意搜尋的資料和索引（靈感會保留）。</li>
 </ul>
 
 <h3>聯絡方式</h3>
@@ -346,7 +411,7 @@
 
 <div lang="de">
 <h2 id="de">Hirameki – Datenschutzerklärung</h2>
-<p class="date">Zuletzt aktualisiert: 14. November 2026</p>
+<p class="date">Zuletzt aktualisiert: 27. November 2026</p>
 
 <p>Hirameki („die App“) ist eine Notiz-App für das iPhone, die von 半歩舎 (Hanposha) entwickelt und vertrieben wird. Sie speichert und ordnet die Ideen, die du Siri oder deinem Begleiter (einer Katze, einem Hund oder einer Eule) erzählst. Die Ideen und persönlichen Daten, die du speicherst, werden niemals an den Entwickler gesendet, und es werden keine Werbe- oder Analysedienste genutzt. Es gibt keinen Server des Entwicklers.</p>
 
@@ -357,6 +422,10 @@
   <li>Einstellungen und Ähnliches: der Begleiter, den du gewählt hast, der Begleiter, den du zuerst gewählt hast, ob du Hirameki Plus hast und bis wann, sowie der Status der iCloud-Synchronisierung (eine Kennung des Accounts, mit dem synchronisiert wird, und der Fortschritt der Synchronisierung).</li>
   <li>Löschprotokoll: Bei Ideen, die du mit „Endgültig löschen“ entfernst, werden nur eine Identifikationsnummer und der Zeitpunkt der Löschung aufbewahrt, damit eine alte Kopie auf einem anderen Gerät sie nicht zurückbringen kann (der Text wird nicht aufbewahrt).</li>
   <li>Sprache: Was du mit „Mit dem Begleiter sprechen“ sagst, wird durch die Spracherkennung auf dem Gerät in Text umgewandelt. Es werden keine Aufnahmen gespeichert.</li>
+  <li>Erledigt und Erinnerungen: wann Sie eine Idee als erledigt markiert haben, und ihre Erinnerungszeit. Diese werden mit der Idee gespeichert und synchronisiert, wenn Sie die iCloud-Synchronisierung nutzen.</li>
+  <li>Entwurf: der Text auf dem Bildschirm „Mit dem Begleiter sprechen“ (das Gesagte und alles, was Sie getippt oder bearbeitet haben), ob er für die Einkaufsliste war, und die Kennung der Idee, zu der er hinzugefügt werden sollte. Im Einstellungsspeicher der App auf dem Gerät abgelegt und nicht über iCloud synchronisiert (er kann in Ihrem Geräte-Backup enthalten sein). Er wird entfernt, wenn „Anvertrauen“ ihn speichert oder wenn Sie auf „Diese Worte löschen“ tippen. Ein Entwurf, dessen letztes Speichern mehr als 7 Tage zurückliegt, wird beim nächsten Öffnen von „Mit dem Begleiter sprechen“ verworfen statt wiederhergestellt.</li>
+  <li>Index für „Nach Bedeutung suchen“: Wenn Sie die Daten für „Nach Bedeutung suchen“ geladen haben, speichert die App für jede Idee auf dem Gerät eine aus ihrem Text erzeugte Zahlenreihe (zum Vergleichen von Bedeutungen) und einen kurzen Wert, an dem sich erkennen lässt, ob sich der Text geändert hat. Er wird weder synchronisiert noch gesichert.</li>
+<!-- v1.5 -->
 </ul>
 
 <h3>Wo Daten gespeichert und synchronisiert werden</h3>
@@ -377,6 +446,12 @@
 <h3>KI auf dem Gerät</h3>
 <p>Auf Geräten, die Apple Intelligence unterstützen, schreibt Apples Modell auf dem Gerät (Foundation Models) einen Titel, eine Kategorie und eine Zusammenfassung für deine Ideen. Dies läuft auf dem Gerät; die App sendet dafür nichts nach außen.</p>
 
+<h3>Mitteilungen</h3>
+<p>Erinnerungen, die Sie mit der Glocke festlegen, werden auf dem Gerät geplant und laufen nie über einen Server des Entwicklers. Eine Erinnerung zeigt den Titel der Idee (bis zu 60 Zeichen). Ob ihr Inhalt auf dem Sperrbildschirm erscheint, richtet sich nach Ihren iOS-Mitteilungseinstellungen. Die Erinnerungszeit wird über iCloud auch mit Ihren anderen Geräten synchronisiert, und jedes Gerät plant die Erinnerung selbst, sofern dort Mitteilungen erlaubt sind (eine Verzögerung bei der Synchronisierung oder die Grenze von 50 nächstgelegenen Erinnerungen pro Gerät kann dazu führen, dass eine Erinnerung nicht erscheint).</p>
+
+<h3>Nach Bedeutung suchen</h3>
+<p>„Nach Bedeutung suchen“ verwendet Daten, die aus dem öffentlich verfügbaren Sprachmodell multilingual-e5-small (MIT-Lizenz) für das Gerät umgewandelt wurden. Die Daten (etwa 93 MB) werden nur dann aus dem App Store empfangen, wenn Sie auf „Laden“ tippen, und auf dem Gerät gespeichert (von Backups ausgenommen). Suche und Indexaufbau laufen ausschließlich auf dem Gerät; der Text Ihrer Ideen und Ihre Suchbegriffe werden nie nach außen gesendet.</p>
+
 <h3>Netzwerk</h3>
 <p>Die einzigen Dienste, die die App automatisch kontaktiert, sind die folgenden Dienste von Apple.</p>
 <ul>
@@ -384,6 +459,8 @@
   <li>App Store (StoreKit): Kauf von Hirameki Plus, Wiederherstellen von Käufen und Prüfen des Kaufstatus. Zahlungsinformationen erhält die App niemals.</li>
 </ul>
 <p>Die Verarbeitung erfolgt gemäß der Datenschutzrichtlinie von Apple. Eine Registrierung ist nicht erforderlich. Nur wenn du auf einen Link tippst, öffnet die App die Nutzungsbedingungen, diese Seite oder Apples App „Kurzbefehle“.</p>
+
+<p>Außerdem empfängt die App diese Daten nur dann aus dem App Store, wenn Sie sich entscheiden, die Daten für „Nach Bedeutung suchen“ zu laden.</p>
 
 <h3>Daten, die die App nicht erhebt</h3>
 <ul>
@@ -400,6 +477,7 @@
   <li>Wenn du die App löschst, werden die Daten auf dem Gerät entfernt. In iCloud verbliebene Daten kannst du unter Einstellungen → dein Name → iCloud → Speicher verwalten (oder Accountspeicher verwalten) → Hirameki löschen. Das Löschen der iCloud-Daten löscht nicht die Ideen, die sich noch auf deinen Geräten befinden.</li>
   <li>Exportierte TXT- und JSON-Dateien befinden sich außerhalb der App; lösche sie dort, wo du sie gespeichert hast.</li>
   <li>Dein Kaufverlauf im App Store wird von Apple verwaltet.</li>
+  <li>Die Daten und der Index für „Nach Bedeutung suchen“ werden mit der Option »Daten für „Nach Bedeutung suchen“ löschen« in den Einstellungen entfernt (Ihre Ideen bleiben erhalten).</li>
 </ul>
 
 <h3>Kontakt</h3>
@@ -411,7 +489,7 @@
 
 <div lang="es">
 <h2 id="es">Política de privacidad de Hirameki</h2>
-<p class="date">Última actualización: 14 de noviembre de 2026</p>
+<p class="date">Última actualización: 27 de noviembre de 2026</p>
 
 <p>Hirameki (“la app”) es una app de notas para iPhone desarrollada y distribuida por 半歩舎 (Hanposha). Guarda y organiza las ideas que le cuentas a Siri o a tu compañero (un gato, un perro o un búho). Las ideas y la información personal que guardas nunca se envían al desarrollador, y no se usa ningún servicio de publicidad ni de análisis. No existe ningún servidor del desarrollador.</p>
 
@@ -422,6 +500,10 @@
   <li>Ajustes y similares: el compañero que elegiste, el compañero que elegiste primero, si tienes Hirameki Plus y hasta cuándo, y el estado de la sincronización con iCloud (un identificador de la cuenta con la que se sincroniza y el progreso de la sincronización).</li>
   <li>Registro de eliminación: de las ideas que borras con “Eliminar para siempre” solo se conservan un número de identificación y la hora de la eliminación, para que una copia antigua en otro dispositivo no pueda recuperarlas (el texto no se conserva).</li>
   <li>Voz: lo que dices con “Hablar con mi compañero” se convierte en texto mediante el reconocimiento de voz en el dispositivo. No se guarda ninguna grabación.</li>
+  <li>Hecho y recordatorios: cuándo marcó una idea como hecha y la hora de su recordatorio. Se guardan con la idea y se sincronizan si usa la sincronización de iCloud.</li>
+  <li>Borrador: el texto de la pantalla «Hablar con mi compañero» (lo que dijo y lo que haya escrito o editado), si era para la lista de la compra y el identificador de la idea a la que se iba a añadir. Se guarda en el almacenamiento de ajustes de la app en el dispositivo y no se sincroniza mediante iCloud (puede incluirse en la copia de seguridad del dispositivo). Se elimina cuando «Dar» lo guarda o cuando toca «Borrar esas palabras». Un borrador de más de 7 días desde la última vez que se guardó se descarta, sin recuperarse, la próxima vez que abra «Hablar con mi compañero».</li>
+  <li>Índice de «Buscar por significado»: si descargó los datos de «Buscar por significado», para cada idea la app guarda en el dispositivo una lista de números creada a partir de su texto (para comparar significados) y un valor corto que indica si el texto ha cambiado. No se sincroniza ni se incluye en las copias de seguridad.</li>
+<!-- v1.5 -->
 </ul>
 
 <h3>Dónde se guardan y sincronizan los datos</h3>
@@ -442,6 +524,12 @@
 <h3>IA en el dispositivo</h3>
 <p>En los dispositivos compatibles con Apple Intelligence, el modelo en el dispositivo de Apple (Foundation Models) escribe un título, una categoría y un resumen para tus ideas. Esto se ejecuta en el dispositivo; la app no envía nada al exterior para ello.</p>
 
+<h3>Notificaciones</h3>
+<p>Los recordatorios que configura con la campana se programan en el dispositivo y nunca pasan por un servidor del desarrollador. Un recordatorio muestra el título de la idea (hasta 60 caracteres). Que su contenido aparezca en la pantalla bloqueada depende de los ajustes de notificaciones de iOS. La hora del recordatorio también se sincroniza con sus otros dispositivos mediante iCloud, y cada dispositivo programa el recordatorio por sí mismo si tiene las notificaciones permitidas (un retraso en la sincronización o el límite de los 50 recordatorios más próximos por dispositivo pueden impedir que aparezca alguno).</p>
+
+<h3>Buscar por significado</h3>
+<p>«Buscar por significado» usa datos convertidos para el dispositivo a partir del modelo de lenguaje público multilingual-e5-small (licencia MIT). Los datos (unos 93 MB) se reciben desde el App Store solo cuando toca «Descargar», y se guardan en el dispositivo (excluidos de las copias de seguridad). Tanto la búsqueda como la creación del índice se realizan solo en el dispositivo; el texto de sus ideas y sus palabras de búsqueda nunca se envían fuera.</p>
+
 <h3>Red</h3>
 <p>Los únicos servicios con los que la app se conecta automáticamente son los siguientes servicios de Apple.</p>
 <ul>
@@ -449,6 +537,8 @@
   <li>App Store (StoreKit): compra de Hirameki Plus, restauración de compras y comprobación del estado de las compras. La app nunca recibe información de pago.</li>
 </ul>
 <p>Estos datos se tratan conforme a la política de privacidad de Apple. No es necesario registrarse. La app solo abre los Términos de uso, esta página o la app Atajos de Apple cuando tocas un enlace.</p>
+
+<p>Además, solo cuando decide descargar los datos de «Buscar por significado», la app recibe esos datos desde el App Store.</p>
 
 <h3>Información que la app no recopila</h3>
 <ul>
@@ -465,6 +555,7 @@
   <li>Al eliminar la app se borran los datos del dispositivo. Los datos que queden en iCloud se pueden eliminar desde Ajustes → tu nombre → iCloud → Gestionar almacenamiento (o Gestionar el almacenamiento de la cuenta) → Hirameki. Eliminar los datos de iCloud no elimina las ideas que siguen en tus dispositivos.</li>
   <li>Los archivos TXT y JSON que exportaste están fuera de la app; elimínalos donde los guardaste.</li>
   <li>Tu historial de compras del App Store lo gestiona Apple.</li>
+  <li>Los datos y el índice de «Buscar por significado» se eliminan con la opción “Eliminar datos de «Buscar por significado»” en los ajustes (sus ideas se conservan).</li>
 </ul>
 
 <h3>Contacto</h3>
@@ -476,7 +567,7 @@
 
 <div lang="fr">
 <h2 id="fr">Politique de confidentialité de Hirameki</h2>
-<p class="date">Dernière mise à jour : 14 novembre 2026</p>
+<p class="date">Dernière mise à jour : 27 novembre 2026</p>
 
 <p>Hirameki (« l’app ») est une app de notes pour iPhone développée et distribuée par 半歩舎 (Hanposha). Elle enregistre et organise les idées que tu confies à Siri ou à ton compagnon (un chat, un chien ou un hibou). Les idées et les informations personnelles que tu enregistres ne sont jamais envoyées au développeur, et aucun service de publicité ni d’analyse n’est utilisé. Il n’y a aucun serveur du développeur.</p>
 
@@ -487,6 +578,10 @@
   <li>Réglages et éléments similaires : le compagnon que tu as choisi, le compagnon que tu as choisi en premier, si tu as Hirameki Plus et jusqu’à quand, et l’état de la synchronisation iCloud (un identifiant du compte avec lequel la synchronisation a lieu, et l’avancement de la synchronisation).</li>
   <li>Registre des suppressions : pour les idées supprimées avec « Supprimer définitivement », seuls un numéro d’identification et l’heure de la suppression sont conservés, afin qu’une ancienne copie sur un autre appareil ne puisse pas les faire revenir (le texte n’est pas conservé).</li>
   <li>Voix : ce que tu dis avec « Parler à mon compagnon » est converti en texte par la reconnaissance vocale sur l’appareil. Aucun enregistrement audio n’est conservé.</li>
+  <li>« Fait » et rappels : le moment où vous avez marqué une idée comme faite, et l’heure de son rappel. Ces informations sont enregistrées avec l’idée et synchronisées si vous utilisez la synchronisation iCloud.</li>
+  <li>Brouillon : le texte de l’écran « Parler à mon compagnon » (ce que vous avez dit et ce que vous avez saisi ou modifié), s’il était destiné ou non à la liste de courses, et l’identifiant de l’idée à laquelle il devait être ajouté. Conservé dans l’espace des réglages de l’app sur l’appareil et non synchronisé via iCloud (il peut être inclus dans la sauvegarde de votre appareil). Il est effacé lorsque « Confier » l’enregistre ou lorsque vous touchez « Effacer ces mots ». Un brouillon dont le dernier enregistrement date de plus de 7 jours est supprimé, sans être restauré, la prochaine fois que vous ouvrez « Parler à mon compagnon ».</li>
+  <li>Index de Chercher par sens : si vous avez téléchargé les données de Chercher par sens, l’app conserve sur l’appareil, pour chaque idée, une liste de nombres calculée à partir de son texte (servant à comparer les sens) et une courte valeur indiquant si le texte a changé. Il n’est ni synchronisé ni sauvegardé.</li>
+<!-- v1.5 -->
 </ul>
 
 <h3>Où les données sont stockées et synchronisées</h3>
@@ -507,6 +602,12 @@
 <h3>IA sur l’appareil</h3>
 <p>Sur les appareils compatibles avec Apple Intelligence, le modèle sur l’appareil d’Apple (Foundation Models) rédige un titre, une catégorie et un résumé pour tes idées. Ce traitement a lieu sur l’appareil ; l’app n’envoie rien à l’extérieur pour cela.</p>
 
+<h3>Notifications</h3>
+<p>Les rappels que vous définissez avec la cloche sont programmés sur l’appareil et ne passent jamais par un serveur du développeur. Un rappel affiche le titre de l’idée (60 caractères au maximum). L’affichage de son contenu sur l’écran verrouillé dépend de vos réglages de notifications iOS. L’heure du rappel est aussi synchronisée avec vos autres appareils via iCloud, et chaque appareil programme lui-même le rappel si les notifications y sont autorisées (un retard de synchronisation, ou la limite des 50 rappels les plus proches par appareil, peut empêcher un rappel de s’afficher).</p>
+
+<h3>Chercher par sens</h3>
+<p>Chercher par sens utilise des données converties pour l’appareil à partir du modèle de langage public multilingual-e5-small (licence MIT). Ces données (environ 93 Mo) sont reçues depuis l’App Store uniquement lorsque vous touchez « Télécharger », et sont conservées sur l’appareil (exclues des sauvegardes). La recherche comme la création de l’index se font uniquement sur l’appareil ; le texte de vos idées et vos mots de recherche ne sont jamais envoyés à l’extérieur.</p>
+
 <h3>Réseau</h3>
 <p>Les seuls services que l’app contacte automatiquement sont les services Apple suivants.</p>
 <ul>
@@ -514,6 +615,8 @@
   <li>App Store (StoreKit) : achat de Hirameki Plus, restauration des achats et vérification de l’état des achats. L’app ne reçoit jamais d’informations de paiement.</li>
 </ul>
 <p>Ces traitements sont effectués conformément à la politique de confidentialité d’Apple. Aucune inscription n’est nécessaire. L’app n’ouvre les Conditions d’utilisation, cette page ou l’app Raccourcis d’Apple que lorsque tu touches un lien.</p>
+
+<p>Par ailleurs, l’app reçoit les données de Chercher par sens depuis l’App Store uniquement lorsque vous choisissez de les télécharger.</p>
 
 <h3>Informations que l’app ne collecte pas</h3>
 <ul>
@@ -530,6 +633,7 @@
   <li>Supprimer l’app efface les données présentes sur l’appareil. Les données restant dans iCloud peuvent être supprimées depuis Réglages → ton nom → iCloud → Gérer le stockage (ou Gérer le stockage du compte) → Hirameki. Supprimer les données iCloud ne supprime pas les idées encore présentes sur tes appareils.</li>
   <li>Les fichiers TXT et JSON que tu as exportés se trouvent en dehors de l’app ; supprime-les là où tu les as enregistrés.</li>
   <li>Ton historique d’achats sur l’App Store est géré par Apple.</li>
+  <li>Les données et l’index de Chercher par sens sont supprimés avec Supprimer les données de « Chercher par sens » dans les réglages (vos idées sont conservées).</li>
 </ul>
 
 <h3>Contact</h3>
@@ -541,7 +645,7 @@
 
 <div lang="it">
 <h2 id="it">Informativa sulla privacy di Hirameki</h2>
-<p class="date">Ultimo aggiornamento: 14 novembre 2026</p>
+<p class="date">Ultimo aggiornamento: 27 novembre 2026</p>
 
 <p>Hirameki («l’app») è un’app per iPhone per prendere note, sviluppata e distribuita da 半歩舎 (Hanposha). Salva e organizza le idee che racconti a Siri o al tuo amico (un gatto, un cane o un gufo). Le idee e i dati personali che salvi non vengono mai inviati allo sviluppatore, e non vengono utilizzati servizi pubblicitari o di analisi. Lo sviluppatore non dispone di alcun server.</p>
 
@@ -552,6 +656,10 @@
   <li>Impostazioni e simili: l’amico che hai scelto, l’amico che hai scelto per primo, se hai Hirameki Plus e fino a quando, e lo stato della sincronizzazione con iCloud (un identificativo dell’account con cui avviene la sincronizzazione e l’avanzamento della sincronizzazione).</li>
   <li>Registro delle eliminazioni: per le idee eliminate con «Elimina per sempre», vengono conservati solo un numero identificativo e l’ora dell’eliminazione, affinché una vecchia copia su un altro dispositivo non possa riportarle indietro (il testo non viene conservato).</li>
   <li>Voce: ciò che dici con «Parla al mio amico» viene trasformato in testo dal riconoscimento vocale sul dispositivo. Non viene salvata alcuna registrazione.</li>
+  <li>“Fatto” e promemoria: quando hai segnato un’idea come fatta e l’orario del suo promemoria. Vengono salvati insieme all’idea e sincronizzati se usi la sincronizzazione iCloud.</li>
+  <li>Bozza: il testo nella schermata “Parla al mio amico” (ciò che hai detto e ciò che hai digitato o modificato), se era per la lista della spesa e l’identificativo dell’idea a cui doveva essere aggiunto. Conservata nello spazio delle impostazioni dell’app sul dispositivo e non sincronizzata tramite iCloud (può essere inclusa nel backup del dispositivo). Viene cancellata quando “Affida” la salva o quando tocchi “Cancella queste parole”. Una bozza salvata per l’ultima volta più di 7 giorni prima viene eliminata, senza essere ripristinata, la prossima volta che apri “Parla al mio amico”.</li>
+  <li>Indice di Cerca per significato: se hai scaricato i dati di Cerca per significato, per ogni idea l’app conserva sul dispositivo una sequenza di numeri ricavata dal testo (usata per confrontare i significati) e un breve valore che indica se il testo è cambiato. Non viene né sincronizzato né incluso nei backup.</li>
+<!-- v1.5 -->
 </ul>
 
 <h3>Dove i dati vengono archiviati e sincronizzati</h3>
@@ -572,6 +680,12 @@
 <h3>IA sul dispositivo</h3>
 <p>Sui dispositivi che supportano Apple Intelligence, il modello sul dispositivo di Apple (Foundation Models) scrive un titolo, una categoria e un riassunto per le tue idee. Questa elaborazione avviene sul dispositivo; l’app non invia nulla all’esterno a questo scopo.</p>
 
+<h3>Notifiche</h3>
+<p>I promemoria impostati con la campanella vengono programmati sul dispositivo e non passano mai da un server dello sviluppatore. Un promemoria mostra il titolo dell’idea (fino a 60 caratteri). La visualizzazione del contenuto nella schermata di blocco dipende dalle impostazioni delle notifiche di iOS. L’orario del promemoria viene sincronizzato anche con gli altri tuoi dispositivi tramite iCloud, e ogni dispositivo programma il promemoria autonomamente se su di esso le notifiche sono consentite (un ritardo nella sincronizzazione, o il limite dei 50 promemoria più vicini per dispositivo, può impedire che un promemoria compaia).</p>
+
+<h3>Cerca per significato</h3>
+<p>Cerca per significato usa dati convertiti per il dispositivo a partire dal modello linguistico pubblico multilingual-e5-small (licenza MIT). I dati (circa 93 MB) vengono ricevuti dall’App Store solo quando tocchi “Scarica” e sono conservati sul dispositivo (esclusi dai backup). Sia la ricerca sia la creazione dell’indice avvengono solo sul dispositivo; il testo delle tue idee e le parole che cerchi non vengono mai inviati all’esterno.</p>
+
 <h3>Rete</h3>
 <p>Gli unici servizi che l’app contatta automaticamente sono i seguenti servizi Apple.</p>
 <ul>
@@ -579,6 +693,8 @@
   <li>App Store (StoreKit): l’acquisto di Hirameki Plus, il ripristino degli acquisti e la verifica dello stato degli acquisti. L’app non riceve mai i dati di pagamento.</li>
 </ul>
 <p>Questi trattamenti avvengono in base all’informativa sulla privacy di Apple. Non è richiesta alcuna registrazione. Solo quando tocchi un link, l’app apre le Condizioni d’uso, questa pagina o l’app Comandi Rapidi di Apple.</p>
+
+<p>Inoltre, l’app riceve i dati di Cerca per significato dall’App Store solo quando scegli di scaricarli.</p>
 
 <h3>Informazioni che l’app non raccoglie</h3>
 <ul>
@@ -595,6 +711,7 @@
   <li>Eliminando l’app vengono rimossi i dati presenti sul dispositivo. I dati rimasti su iCloud possono essere eliminati da Impostazioni → il tuo nome → iCloud → Gestisci spazio (o Gestisci spazio account) → Hirameki. L’eliminazione dei dati su iCloud non elimina le idee ancora presenti sui tuoi dispositivi.</li>
   <li>I file TXT e JSON che hai esportato si trovano al di fuori dell’app; eliminali nel punto in cui li hai salvati.</li>
   <li>La cronologia dei tuoi acquisti sull’App Store è gestita da Apple.</li>
+  <li>I dati e l’indice di Cerca per significato vengono eliminati con Elimina i dati di «Cerca per significato» nelle impostazioni (le tue idee restano).</li>
 </ul>
 
 <h3>Contatti</h3>
@@ -606,7 +723,7 @@
 
 <div lang="pt-BR">
 <h2 id="pt-BR">Política de Privacidade do Hirameki</h2>
-<p class="date">Última atualização: 14 de novembro de 2026</p>
+<p class="date">Última atualização: 27 de novembro de 2026</p>
 
 <p>O Hirameki (“o app”) é um app de notas para iPhone desenvolvido e distribuído por 半歩舎 (Hanposha). Ele salva e organiza as ideias que você conta à Siri ou ao seu companheiro (um gato, um cachorro ou uma coruja). As ideias e as informações pessoais que você salva nunca são enviadas ao desenvolvedor, e nenhum serviço de publicidade ou de análise é utilizado. Não há servidor do desenvolvedor.</p>
 
@@ -617,6 +734,10 @@
   <li>Ajustes e similares: o companheiro escolhido, o companheiro que você escolheu primeiro, se você tem o Hirameki Plus e até quando, e o estado da sincronização com o iCloud (um identificador da conta com a qual é feita a sincronização e o progresso da sincronização).</li>
   <li>Registro de exclusão: das ideias que você apaga com “Apagar de vez”, são guardados apenas um número de identificação e o horário da exclusão, para que uma cópia antiga em outro aparelho não possa trazê-las de volta (o texto não é guardado).</li>
   <li>Voz: o que você diz com “Falar com meu companheiro” é convertido em texto pelo reconhecimento de fala no aparelho. Nenhuma gravação é salva.</li>
+  <li>“Feito” e lembretes: quando você marcou uma ideia como feita e o horário do lembrete dela. Esses dados são salvos com a ideia e sincronizados se você usar a sincronização do iCloud.</li>
+  <li>Rascunho: o texto da tela “Falar com meu companheiro” (o que você disse e o que digitou ou editou), se era para a lista de compras e o identificador da ideia à qual seria acrescentado. Fica guardado no armazenamento de ajustes do app no dispositivo e não é sincronizado pelo iCloud (pode ser incluído no backup do dispositivo). É apagado quando “Entregar” o salva ou quando você toca em “Apagar essas palavras”. Um rascunho guardado pela última vez há mais de 7 dias é descartado, sem ser restaurado, na próxima vez que você abrir “Falar com meu companheiro”.</li>
+  <li>Índice de Buscar por significado: se você baixou os dados de Buscar por significado, para cada ideia o app guarda no dispositivo uma lista de números gerada a partir do texto (usada para comparar significados) e um valor curto que indica se o texto mudou. Ele não é sincronizado nem incluído em backups.</li>
+<!-- v1.5 -->
 </ul>
 
 <h3>Onde os dados são armazenados e sincronizados</h3>
@@ -637,6 +758,12 @@
 <h3>IA no aparelho</h3>
 <p>Em aparelhos compatíveis com Apple Intelligence, o modelo no aparelho da Apple (Foundation Models) escreve um título, uma categoria e um resumo para suas ideias. Isso é executado no aparelho; o app não envia nada para fora para isso.</p>
 
+<h3>Notificações</h3>
+<p>Os lembretes definidos com o sino são agendados no dispositivo e nunca passam por um servidor do desenvolvedor. O lembrete mostra o título da ideia (até 60 caracteres). Se o conteúdo aparece na Tela Bloqueada depende dos ajustes de notificação do iOS. O horário do lembrete também é sincronizado com seus outros dispositivos pelo iCloud, e cada dispositivo agenda o lembrete por conta própria se as notificações estiverem permitidas nele (um atraso na sincronização, ou o limite dos 50 lembretes mais próximos por dispositivo, pode impedir que um lembrete apareça).</p>
+
+<h3>Buscar por significado</h3>
+<p>O Buscar por significado usa dados convertidos para o dispositivo a partir do modelo de linguagem público multilingual-e5-small (Licença MIT). Os dados (cerca de 93 MB) são recebidos da App Store somente quando você toca em “Baixar”, e ficam guardados no dispositivo (fora dos backups). Tanto a busca quanto a criação do índice acontecem só no dispositivo; o texto das suas ideias e as palavras que você busca nunca são enviados para fora.</p>
+
 <h3>Rede</h3>
 <p>Os únicos serviços que o app contata automaticamente são os seguintes serviços da Apple.</p>
 <ul>
@@ -644,6 +771,8 @@
   <li>App Store (StoreKit): compra do Hirameki Plus, restauração de compras e verificação do estado das compras. O app nunca recebe as informações de pagamento.</li>
 </ul>
 <p>Esse processamento segue a política de privacidade da Apple. Nenhum cadastro é necessário. Somente quando você toca em um link, o app abre os Termos de uso, esta página ou o app Atalhos da Apple.</p>
+
+<p>Além disso, o app só recebe os dados de Buscar por significado da App Store quando você decide baixá-los.</p>
 
 <h3>Informações que o app não coleta</h3>
 <ul>
@@ -660,6 +789,7 @@
   <li>Apagar o app remove os dados do aparelho. Os dados que permanecerem no iCloud podem ser apagados em Ajustes → seu nome → iCloud → Gerenciar Armazenamento (ou Gerenciar Armazenamento da Conta) → Hirameki. Apagar os dados do iCloud não apaga as ideias que ainda estão nos seus aparelhos.</li>
   <li>Os arquivos TXT e JSON que você exportou ficam fora do app; apague-os no local onde você os salvou.</li>
   <li>Seu histórico de compras na App Store é gerenciado pela Apple.</li>
+  <li>Os dados e o índice de Buscar por significado são removidos com Apagar dados de “Buscar por significado” nos ajustes (suas ideias continuam).</li>
 </ul>
 
 <h3>Contato</h3>
@@ -671,7 +801,7 @@
 
 <div lang="ru">
 <h2 id="ru">Политика конфиденциальности Hirameki</h2>
-<p class="date">Последнее обновление: 14 ноября 2026 г.</p>
+<p class="date">Последнее обновление: 27 ноября 2026 г.</p>
 
 <p>Hirameki («приложение») — приложение для заметок на iPhone, которое разрабатывает и распространяет 半歩舎 (Hanposha). Оно сохраняет и упорядочивает идеи, которые ты рассказываешь Siri или своему другу (коту, собаке или сове). Идеи и личные данные, которые ты сохраняешь, никогда не отправляются разработчику, а рекламные и аналитические сервисы не используются. Сервера разработчика нет.</p>
 
@@ -682,6 +812,10 @@
   <li>Настройки и тому подобное: выбранный друг, друг, которого ты выбрал(а) первым, есть ли у тебя Hirameki Plus и до какого срока, а также состояние синхронизации с iCloud (идентификатор учётной записи, с которой идёт синхронизация, и ход синхронизации).</li>
   <li>Записи об удалении: для идей, удалённых через «Удалить навсегда», хранятся только идентификационный номер и время удаления, чтобы старая копия на другом устройстве не могла их вернуть (текст не хранится).</li>
   <li>Голос: то, что ты говоришь через «Поговорить с другом», преобразуется в текст распознаванием речи на устройстве. Записи голоса не сохраняются.</li>
+  <li>«Готово» и напоминания: когда вы отметили идею как выполненную, и время её напоминания. Эти данные сохраняются вместе с идеей и синхронизируются, если вы используете синхронизацию iCloud.</li>
+  <li>Черновик: текст на экране «Поговорить с другом» (сказанное вами и всё, что вы ввели или исправили), был ли он для списка покупок, и идентификатор идеи, к которой его добавляли. Хранится в хранилище настроек приложения на устройстве и не синхронизируется через iCloud (может попасть в резервную копию устройства). Удаляется, когда «Передать» сохраняет его или когда вы касаетесь «Стереть эти слова». Черновик, сохранённый в последний раз более 7 дней назад, при следующем открытии «Поговорить с другом» не восстанавливается, а удаляется.</li>
+  <li>Индекс «Поиска по смыслу»: если вы загрузили данные «Поиска по смыслу», приложение хранит на устройстве для каждой идеи ряд чисел, полученный из её текста (для сравнения смыслов), и короткое значение, показывающее, изменился ли текст. Индекс не синхронизируется и не входит в резервные копии.</li>
+<!-- v1.5 -->
 </ul>
 
 <h3>Где хранятся и как синхронизируются данные</h3>
@@ -702,6 +836,12 @@
 <h3>ИИ на устройстве</h3>
 <p>На устройствах с поддержкой Apple Intelligence модель Apple на устройстве (Foundation Models) составляет заголовок, категорию и краткий итог для твоих идей. Это выполняется на устройстве; приложение ничего никуда для этого не отправляет.</p>
 
+<h3>Уведомления</h3>
+<p>Напоминания, заданные кнопкой колокольчика, планируются на самом устройстве и никогда не проходят через сервер разработчика. В напоминании показывается название идеи (до 60 символов). Отображается ли его содержимое на экране блокировки, зависит от настроек уведомлений iOS. Время напоминания также синхронизируется с другими вашими устройствами через iCloud, и каждое устройство само планирует напоминание, если на нём разрешены уведомления (из-за задержки синхронизации или ограничения в 50 ближайших напоминаний на устройство напоминание может не появиться).</p>
+
+<h3>Поиск по смыслу</h3>
+<p>«Поиск по смыслу» использует данные, преобразованные для устройства из общедоступной языковой модели multilingual-e5-small (лицензия MIT). Данные (около 93 МБ) загружаются из App Store только тогда, когда вы касаетесь «Загрузить», и хранятся на устройстве (не включаются в резервные копии). И поиск, и построение индекса выполняются только на устройстве; текст ваших идей и поисковые слова никуда не отправляются.</p>
+
 <h3>Сеть</h3>
 <p>Приложение автоматически обращается только к следующим сервисам Apple.</p>
 <ul>
@@ -709,6 +849,8 @@
   <li>App Store (StoreKit): покупка Hirameki Plus, восстановление покупок и проверка состояния покупок. Платёжные данные приложение никогда не получает.</li>
 </ul>
 <p>Эта обработка ведётся в соответствии с политикой конфиденциальности Apple. Регистрация не требуется. Только когда ты нажимаешь на ссылку, приложение открывает Условия использования, эту страницу или приложение Apple «Команды».</p>
+
+<p>Кроме того, приложение получает данные «Поиска по смыслу» из App Store только тогда, когда вы сами решите их загрузить.</p>
 
 <h3>Какие данные приложение не собирает</h3>
 <ul>
@@ -725,6 +867,7 @@
   <li>При удалении приложения данные на устройстве удаляются. Данные, оставшиеся в iCloud, можно удалить в разделе «Настройки» → твоё имя → iCloud → «Управлять хранилищем» (или «Управлять хранилищем учетной записи») → Hirameki. Удаление данных в iCloud не удаляет идеи, которые ещё остаются на твоих устройствах.</li>
   <li>Экспортированные файлы TXT и JSON находятся вне приложения; удали их там, где ты их сохранил(а).</li>
   <li>Историей твоих покупок в App Store управляет Apple.</li>
+  <li>Данные и индекс «Поиска по смыслу» удаляются кнопкой Удалить данные «Поиска по смыслу» в настройках (идеи сохраняются).</li>
 </ul>
 
 <h3>Связь</h3>
@@ -736,7 +879,7 @@
 
 <div lang="tr">
 <h2 id="tr">Hirameki Gizlilik Politikası</h2>
-<p class="date">Son güncelleme: 14 Kasım 2026</p>
+<p class="date">Son güncelleme: 27 Kasım 2026</p>
 
 <p>Hirameki (“uygulama”), 半歩舎 (Hanposha) tarafından geliştirilen ve dağıtılan bir iPhone not uygulamasıdır. Siri’ye veya dostuna (bir kedi, köpek veya baykuş) anlattığın fikirleri kaydeder ve düzenler. Kaydettiğin fikirler ve kişisel bilgiler asla geliştiriciye gönderilmez ve hiçbir reklam veya analiz hizmeti kullanılmaz. Geliştiriciye ait bir sunucu yoktur.</p>
 
@@ -747,6 +890,10 @@
   <li>Ayarlar ve benzerleri: seçtiğin dost, ilk seçtiğin dost, Hirameki Plus’ın olup olmadığı ve ne zamana kadar geçerli olduğu, iCloud eşzamanlama durumu (eşzamanlanan hesabın bir tanımlayıcısı ve eşzamanlamanın ilerleme durumu).</li>
   <li>Silme kaydı: “Kalıcı Olarak Sil” ile sildiğin fikirler için, başka bir cihazdaki eski bir kopyanın onları geri getirmemesi amacıyla yalnızca tanımlayıcı bir numara ve silinme zamanı saklanır (metin saklanmaz).</li>
   <li>Ses: “Dostumla Konuş” ile söylediklerin cihaz içi konuşma tanımayla metne dönüştürülür. Hiçbir ses kaydı saklanmaz.</li>
+  <li>“Yapıldı” ve hatırlatıcılar: bir fikri yapıldı olarak işaretlediğiniz zaman ve fikrin hatırlatıcı zamanı. Bunlar fikirle birlikte kaydedilir ve iCloud eşitlemesini kullanıyorsanız eşitlenir.</li>
+  <li>Taslak: “Dostumla Konuş” ekranındaki metin (söyledikleriniz ve yazdığınız ya da düzelttiğiniz her şey), alışveriş listesi için olup olmadığı ve eklenmekte olduğu fikrin kimliği. Aygıttaki uygulama ayarları alanında tutulur ve iCloud üzerinden eşitlenmez (aygıt yedeğinize dahil edilebilir). “Emanet Et” ile kaydedildiğinde veya “Bu Sözleri Sil” düğmesine dokunduğunuzda silinir. Son kaydedilmesinin üzerinden 7 günden fazla geçen bir taslak, “Dostumla Konuş” ekranını bir sonraki açışınızda geri getirilmeden silinir.</li>
+  <li>Anlama göre ara dizini: Anlama göre ara verilerini indirdiyseniz uygulama her fikir için, metninden oluşturulan bir sayı listesini (anlamları karşılaştırmak için kullanılır) ve metnin değişip değişmediğini gösteren kısa bir değeri aygıtta saklar. Bu dizin eşitlenmez ve yedeklenmez.</li>
+<!-- v1.5 -->
 </ul>
 
 <h3>Verilerin saklandığı ve eşzamanlandığı yer</h3>
@@ -767,6 +914,12 @@
 <h3>Cihaz içi yapay zekâ</h3>
 <p>Apple Intelligence’ı destekleyen cihazlarda Apple’ın cihaz içi modeli (Foundation Models) fikirlerin için bir başlık, kategori ve özet yazar. Bu işlem cihazda çalışır; uygulama bunun için dışarıya hiçbir şey göndermez.</p>
 
+<h3>Bildirimler</h3>
+<p>Zil ile ayarladığınız hatırlatıcılar aygıtta planlanır ve hiçbir zaman geliştiricinin sunucusundan geçmez. Hatırlatıcıda fikrin başlığı (en fazla 60 karakter) gösterilir. İçeriğin kilitli ekranda görünüp görünmeyeceği iOS bildirim ayarlarınıza bağlıdır. Hatırlatıcı zamanı iCloud üzerinden diğer aygıtlarınıza da eşitlenir ve bildirimlere izin verilen her aygıt hatırlatıcıyı kendisi planlar (eşitleme gecikmesi veya aygıt başına en yakın 50 hatırlatıcı sınırı nedeniyle bir hatırlatıcı görünmeyebilir).</p>
+
+<h3>Anlama göre ara</h3>
+<p>Anlama göre ara, multilingual-e5-small adlı herkese açık dil modelinden (MIT Lisansı) aygıt için dönüştürülmüş verileri kullanır. Veriler (yaklaşık 93 MB) yalnızca “İndir” düğmesine dokunduğunuzda App Store’dan alınır ve aygıtta saklanır (yedeklemelere dahil edilmez). Hem arama hem de dizin oluşturma yalnızca aygıtta yapılır; fikirlerinizin metni ve arama kelimeleriniz hiçbir zaman dışarı gönderilmez.</p>
+
 <h3>Ağ</h3>
 <p>Uygulamanın otomatik olarak bağlandığı hizmetler yalnızca aşağıdaki Apple hizmetleridir.</p>
 <ul>
@@ -774,6 +927,8 @@
   <li>App Store (StoreKit): Hirameki Plus’ı satın alma, satın almaları geri yükleme ve satın alma durumunu kontrol etme. Ödeme bilgileri uygulamaya asla ulaşmaz.</li>
 </ul>
 <p>Bunlar Apple’ın gizlilik politikası kapsamında işlenir. Kayıt olman gerekmez. Uygulama Kullanım Koşulları’nı, bu sayfayı veya Apple’ın Kestirmeler uygulamasını yalnızca bir bağlantıya dokunduğunda açar.</p>
+
+<p>Ayrıca uygulama, Anlama göre ara verilerini yalnızca siz indirmeyi seçtiğinizde App Store’dan alır.</p>
 
 <h3>Uygulamanın toplamadığı bilgiler</h3>
 <ul>
@@ -790,6 +945,7 @@
   <li>Uygulamayı silmek cihazdaki verileri kaldırır. iCloud’da kalan veriler Ayarlar → adın → iCloud → Saklama Alanını Yönet (veya Hesap Saklama Alanını Yönet) → Hirameki bölümünden silinebilir. iCloud verilerini silmek, cihazlarında hâlâ bulunan fikirleri silmez.</li>
   <li>Dışa aktardığın TXT ve JSON dosyaları uygulamanın dışındadır; onları kaydettiğin yerden sil.</li>
   <li>App Store satın alma geçmişin Apple tarafından yönetilir.</li>
+  <li>Anlama göre ara verileri ve dizini, ayarlardaki “Anlama göre ara” verilerini sil ile silinir (fikirleriniz kalır).</li>
 </ul>
 
 <h3>İletişim</h3>
@@ -801,7 +957,7 @@
 
 <div lang="nl">
 <h2 id="nl">Privacybeleid van Hirameki</h2>
-<p class="date">Laatst bijgewerkt: 14 november 2026</p>
+<p class="date">Laatst bijgewerkt: 27 november 2026</p>
 
 <p>Hirameki (‘de app’) is een notitie-app voor de iPhone, ontwikkeld en verspreid door 半歩舎 (Hanposha). De app bewaart en ordent de ideeën die je aan Siri of je maatje (een kat, hond of uil) vertelt. De ideeën en persoonlijke gegevens die je bewaart, worden nooit naar de ontwikkelaar gestuurd, en er worden geen advertentie- of analysediensten gebruikt. Er is geen server van de ontwikkelaar.</p>
 
@@ -812,6 +968,10 @@
   <li>Instellingen en dergelijke: het maatje dat je hebt gekozen, het maatje dat je als eerste koos, of je Hirameki Plus hebt en tot wanneer, en de status van de iCloud-synchronisatie (een identificatie van het account waarmee wordt gesynchroniseerd, en de voortgang van de synchronisatie).</li>
   <li>Verwijderingsregistratie: van ideeën die je met ‘Voorgoed wissen’ hebt verwijderd, worden alleen een identificatienummer en het tijdstip van verwijdering bewaard, zodat een oude kopie op een ander apparaat ze niet kan terugbrengen (de tekst wordt niet bewaard).</li>
   <li>Spraak: wat je zegt met ‘Praat met mijn maatje’ wordt door spraakherkenning op het apparaat omgezet in tekst. Er worden geen opnamen bewaard.</li>
+  <li>Gedaan en herinneringen: wanneer je een idee als gedaan hebt gemarkeerd, en de tijd van de herinnering. Deze worden samen met het idee bewaard en gesynchroniseerd als je iCloud-synchronisatie gebruikt.</li>
+  <li>Concept: de tekst op het scherm “Praat met mijn maatje” (wat je hebt gezegd en alles wat je hebt getypt of aangepast), of deze voor de boodschappenlijst was, en de identificatiecode van het idee waaraan deze werd toegevoegd. Bewaard in de opslag voor app-instellingen op het apparaat en niet gesynchroniseerd via iCloud (het kan wel in de reservekopie van je apparaat worden opgenomen). Het wordt verwijderd wanneer “Geef” het opslaat of wanneer je op “Die woorden wissen” tikt. Een concept dat langer dan 7 dagen geleden voor het laatst is bewaard, wordt de volgende keer dat je “Praat met mijn maatje” opent weggegooid in plaats van teruggezet.</li>
+  <li>Index voor Zoek op betekenis: als je de gegevens voor Zoek op betekenis hebt gedownload, bewaart de app voor elk idee op het apparaat een reeks getallen die uit de tekst is gemaakt (om betekenissen te vergelijken) en een korte waarde waarmee wordt herkend of de tekst is gewijzigd. Deze worden niet gesynchroniseerd en er wordt geen reservekopie van gemaakt.</li>
+<!-- v1.5 -->
 </ul>
 
 <h3>Waar gegevens worden bewaard en gesynchroniseerd</h3>
@@ -832,6 +992,12 @@
 <h3>AI op het apparaat</h3>
 <p>Op apparaten die Apple Intelligence ondersteunen, schrijft het model van Apple op het apparaat (Foundation Models) een titel, categorie en samenvatting voor je ideeën. Dit gebeurt op het apparaat; de app stuurt hiervoor niets naar buiten.</p>
 
+<h3>Meldingen</h3>
+<p>Herinneringen die je met de bel instelt, worden op het apparaat ingepland en gaan nooit via een server van de ontwikkelaar. Een herinnering toont de titel van het idee (maximaal 60 tekens). Of de inhoud op het toegangsscherm verschijnt, hangt af van je meldingsinstellingen in iOS. De herinneringstijd wordt via iCloud ook naar je andere apparaten gesynchroniseerd, en elk apparaat plant de herinnering zelf in als meldingen daarop zijn toegestaan (door een vertraging bij het synchroniseren, of door de limiet van de 50 eerstvolgende herinneringen per apparaat, kan een herinnering soms niet verschijnen).</p>
+
+<h3>Zoek op betekenis</h3>
+<p>Zoek op betekenis gebruikt gegevens die voor het apparaat zijn omgezet uit het openbare taalmodel multilingual-e5-small (MIT-licentie). De gegevens (ongeveer 93 MB) worden alleen uit de App Store ontvangen wanneer je op “Download” tikt, en worden op het apparaat bewaard (uitgesloten van reservekopieën). Zowel het zoeken als het opbouwen van de index gebeurt alleen op het apparaat; de tekst van je ideeën en je zoekwoorden worden nooit verstuurd.</p>
+
 <h3>Netwerk</h3>
 <p>De enige diensten waarmee de app automatisch verbinding maakt, zijn de volgende diensten van Apple.</p>
 <ul>
@@ -839,6 +1005,8 @@
   <li>App Store (StoreKit): Hirameki Plus kopen, aankopen herstellen en de aankoopstatus controleren. De app ontvangt nooit betalingsgegevens.</li>
 </ul>
 <p>Deze worden verwerkt volgens het privacybeleid van Apple. Je hoeft je niet te registreren. Alleen als je op een link tikt, opent de app de gebruiksvoorwaarden, deze pagina of de Opdrachten-app van Apple.</p>
+
+<p>Daarnaast ontvangt de app de gegevens voor Zoek op betekenis alleen uit de App Store wanneer je ervoor kiest deze te downloaden.</p>
 
 <h3>Gegevens die de app niet verzamelt</h3>
 <ul>
@@ -855,6 +1023,7 @@
   <li>Als je de app verwijdert, worden de gegevens op het apparaat verwijderd. Gegevens die in iCloud achterblijven, kun je verwijderen via Instellingen → je naam → iCloud → Beheer opslag (of Beheer accountopslag) → Hirameki. Het verwijderen van de iCloud-gegevens verwijdert niet de ideeën die nog op je apparaten staan.</li>
   <li>TXT- en JSON-bestanden die je hebt geëxporteerd, staan buiten de app; verwijder ze op de plek waar je ze hebt bewaard.</li>
   <li>Je aankoopgeschiedenis in de App Store wordt beheerd door Apple.</li>
+  <li>De gegevens en de index voor Zoek op betekenis worden verwijderd met Gegevens voor ‘Zoek op betekenis’ verwijderen in de instellingen (je ideeën blijven bewaard).</li>
 </ul>
 
 <h3>Contact</h3>
@@ -866,7 +1035,7 @@
 
 <div lang="da">
 <h2 id="da">Privatlivspolitik for Hirameki</h2>
-<p class="date">Senest opdateret: 14. november 2026</p>
+<p class="date">Senest opdateret: 27. november 2026</p>
 
 <p>Hirameki (»appen«) er en note-app til iPhone, der er udviklet og distribueres af 半歩舎 (Hanposha). Den gemmer og organiserer de idéer, du fortæller Siri eller din ven (en kat, hund eller ugle). De idéer og personlige oplysninger, du gemmer, sendes aldrig til udvikleren, og der bruges ingen annonce- eller analysetjenester. Udvikleren har ingen server.</p>
 
@@ -877,6 +1046,10 @@
   <li>Indstillinger og lignende: den ven, du har valgt, den ven, du valgte først, om du har Hirameki Plus og indtil hvornår, samt status for iCloud-synkronisering (et id for den konto, der synkroniseres med, og synkroniseringens fremskridt).</li>
   <li>Sletningsregistrering: For idéer, du har slettet med »Slet permanent«, gemmes kun et identifikationsnummer og tidspunktet for sletningen, så en gammel kopi på en anden enhed ikke kan bringe dem tilbage (teksten gemmes ikke).</li>
   <li>Stemme: Det, du siger med »Tal med min ven«, omdannes til tekst af talegenkendelse på enheden. Der gemmes ingen optagelser.</li>
+  <li>Udført og påmindelser: hvornår du markerede en idé som udført, og tidspunktet for dens påmindelse. De gemmes sammen med idéen og synkroniseres, hvis du bruger iCloud-synkronisering.</li>
+  <li>Kladde: teksten på skærmen »Tal med min ven« (det, du sagde, og alt, hvad du har skrevet eller rettet), om den var til indkøbslisten, og id'et for den idé, den skulle føjes til. Gemmes i appens lager til indstillinger på enheden og synkroniseres ikke via iCloud (den kan blive medtaget i sikkerhedskopien af din enhed). Den fjernes, når »Giv« gemmer den, eller når du trykker på »Slet de ord«. En kladde, der er mere end 7 dage gammel regnet fra, da den sidst blev gemt, kasseres i stedet for at blive gendannet, næste gang du åbner »Tal med min ven«.</li>
+  <li>Indeks til Søg efter betydning: hvis du har hentet dataene til Søg efter betydning, gemmer appen for hver idé på enheden en række tal, der er dannet ud fra teksten (bruges til at sammenligne betydninger), og en kort værdi, der viser, om teksten er ændret. Det hverken synkroniseres eller sikkerhedskopieres.</li>
+<!-- v1.5 -->
 </ul>
 
 <h3>Hvor data gemmes og synkroniseres</h3>
@@ -897,6 +1070,12 @@
 <h3>AI på enheden</h3>
 <p>På enheder, der understøtter Apple Intelligence, skriver Apples model på enheden (Foundation Models) en titel, en kategori og et resumé til dine idéer. Det foregår på enheden; appen sender intet ud til det.</p>
 
+<h3>Notifikationer</h3>
+<p>Påmindelser, du indstiller med klokken, planlægges på enheden og går aldrig gennem en server hos udvikleren. En påmindelse viser idéens titel (op til 60 tegn). Om indholdet vises på den låste skærm, afhænger af dine notifikationsindstillinger i iOS. Påmindelsestidspunktet synkroniseres også til dine andre enheder via iCloud, og hver enhed planlægger selv påmindelsen, hvis notifikationer er tilladt på den (en forsinkelse i synkroniseringen eller grænsen på de 50 nærmeste påmindelser pr. enhed kan forhindre, at en påmindelse vises).</p>
+
+<h3>Søg efter betydning</h3>
+<p>Søg efter betydning bruger data, der er konverteret til enheden fra den offentligt tilgængelige sprogmodel multilingual-e5-small (MIT-licens). Dataene (ca. 93 MB) modtages kun fra App Store, når du trykker på »Hent«, og gemmes på enheden (udelukket fra sikkerhedskopier). Både søgning og opbygning af indekset foregår kun på enheden; teksten i dine idéer og dine søgeord sendes aldrig ud.</p>
+
 <h3>Netværk</h3>
 <p>De eneste tjenester, som appen automatisk kontakter, er følgende tjenester fra Apple.</p>
 <ul>
@@ -904,6 +1083,8 @@
   <li>App Store (StoreKit): køb af Hirameki Plus, gendannelse af køb og kontrol af købsstatus. Appen modtager aldrig betalingsoplysninger.</li>
 </ul>
 <p>De behandles i henhold til Apples privatlivspolitik. Der kræves ingen tilmelding. Appen åbner kun Brugsvilkår, denne side eller Apples app Genveje, når du trykker på et link.</p>
+
+<p>Derudover modtager appen kun dataene til Søg efter betydning fra App Store, når du vælger at hente dem.</p>
 
 <h3>Oplysninger, som appen ikke indsamler</h3>
 <ul>
@@ -920,6 +1101,7 @@
   <li>Når du sletter appen, fjernes dataene på enheden. Data, der er tilbage i iCloud, kan slettes under Indstillinger → dit navn → iCloud → Administrer lagringsplads (eller Administrer kontolagringsplads) → Hirameki. Sletning af iCloud-dataene sletter ikke de idéer, der stadig er på dine enheder.</li>
   <li>TXT- og JSON-filer, du har eksporteret, ligger uden for appen; slet dem dér, hvor du gemte dem.</li>
   <li>Din købshistorik i App Store administreres af Apple.</li>
+  <li>Dataene og indekset til Søg efter betydning fjernes med Slet data til “Søg efter betydning” i indstillingerne (dine idéer bliver).</li>
 </ul>
 
 <h3>Kontakt</h3>
@@ -931,7 +1113,7 @@
 
 <div lang="th">
 <h2 id="th">นโยบายความเป็นส่วนตัวของ Hirameki</h2>
-<p class="date">อัปเดตล่าสุด: 14 พฤศจิกายน 2569</p>
+<p class="date">อัปเดตล่าสุด: 27 พฤศจิกายน 2569</p>
 
 <p>Hirameki (“แอป”) เป็นแอปโน้ตสำหรับ iPhone ที่พัฒนาและเผยแพร่โดย 半歩舎 (Hanposha) แอปนี้บันทึกและจัดระเบียบไอเดียที่คุณบอก Siri หรือคู่หูของคุณ (แมว สุนัข หรือนกฮูก) ไอเดียและข้อมูลส่วนบุคคลที่คุณบันทึกไว้จะไม่ถูกส่งไปยังผู้พัฒนาเลย และไม่มีการใช้บริการโฆษณาหรือบริการวิเคราะห์ใดๆ ไม่มีเซิร์ฟเวอร์ของผู้พัฒนา</p>
 
@@ -942,6 +1124,10 @@
   <li>การตั้งค่าและข้อมูลที่คล้ายกัน: คู่หูที่คุณเลือก คู่หูที่คุณเลือกเป็นตัวแรก คุณมี Hirameki Plus หรือไม่และใช้ได้ถึงเมื่อใด และสถานะการซิงค์ iCloud (ตัวระบุของบัญชีที่ซิงค์ด้วย และความคืบหน้าของการซิงค์)</li>
   <li>บันทึกการลบ: สำหรับไอเดียที่คุณ “ลบถาวร” จะเก็บไว้เพียงหมายเลขระบุและเวลาที่ลบ เพื่อไม่ให้สำเนาเก่าในอุปกรณ์อื่นทำให้ไอเดียเหล่านั้นกลับมา (ไม่เก็บข้อความไว้)</li>
   <li>เสียง: สิ่งที่คุณพูดผ่าน “คุยกับคู่หู” จะถูกแปลงเป็นข้อความด้วยการรู้จำเสียงภายในเครื่อง ไม่มีการบันทึกเสียงเก็บไว้</li>
+  <li>ทำแล้วและการเตือน: เวลาที่คุณทำเครื่องหมายว่าไอเดียทำแล้ว และเวลาการเตือนของไอเดียนั้น ข้อมูลเหล่านี้บันทึกไว้พร้อมกับไอเดีย และจะซิงค์หากคุณใช้การซิงค์ iCloud</li>
+  <li>แบบร่าง: ข้อความบนหน้าจอ “คุยกับคู่หู” (ทั้งคำที่คุณพูดและข้อความที่คุณพิมพ์หรือแก้ไข) ข้อมูลว่าเป็นรายการซื้อของหรือไม่ และรหัสระบุของไอเดียที่จะเพิ่มข้อความลงไป เก็บไว้ในพื้นที่จัดเก็บการตั้งค่าของแอปในอุปกรณ์ และไม่ซิงค์ผ่าน iCloud (อาจรวมอยู่ในข้อมูลสำรองของอุปกรณ์) จะถูกลบเมื่อ “ส่งให้” บันทึกข้อความแล้ว หรือเมื่อคุณแตะ “ลบคำที่นำกลับมา” แบบร่างที่เก่ากว่า 7 วันนับจากที่บันทึกไว้ครั้งล่าสุดจะถูกทิ้งโดยไม่นำกลับมาเมื่อคุณเปิด “คุยกับคู่หู” ครั้งถัดไป</li>
+  <li>ดัชนีของการค้นหาตามความหมาย: หากคุณดาวน์โหลดข้อมูลการค้นหาตามความหมาย แอปจะเก็บชุดตัวเลขที่สร้างจากข้อความของแต่ละไอเดีย (ใช้เปรียบเทียบความหมาย) และค่าสั้นๆ ที่ใช้ดูว่าข้อความเปลี่ยนไปหรือไม่ ไว้ในอุปกรณ์ ข้อมูลนี้ไม่ซิงค์และไม่สำรองข้อมูล</li>
+<!-- v1.5 -->
 </ul>
 
 <h3>ที่จัดเก็บและการซิงค์ข้อมูล</h3>
@@ -962,6 +1148,12 @@
 <h3>AI ภายในเครื่อง</h3>
 <p>บนอุปกรณ์ที่รองรับ Apple Intelligence โมเดลภายในเครื่องของ Apple (Foundation Models) จะเขียนชื่อ หมวดหมู่ และสรุปให้ไอเดียของคุณ การทำงานนี้เกิดขึ้นบนอุปกรณ์ และแอปไม่ส่งข้อมูลใดออกไปเพื่อการนี้</p>
 
+<h3>การแจ้งเตือน</h3>
+<p>การเตือนที่คุณตั้งด้วยรูปกระดิ่งจะถูกกำหนดเวลาไว้ในอุปกรณ์ และไม่ผ่านเซิร์ฟเวอร์ของนักพัฒนาเลย การเตือนจะแสดงชื่อของไอเดีย (สูงสุด 60 ตัวอักษร) การแสดงเนื้อหาบนหน้าจอล็อคหรือไม่นั้นเป็นไปตามการตั้งค่าการแจ้งเตือนของ iOS เวลาการเตือนจะซิงค์ไปยังอุปกรณ์อื่นของคุณผ่าน iCloud ด้วย และแต่ละเครื่องจะกำหนดเวลาการเตือนเองหากอนุญาตการแจ้งเตือนบนเครื่องนั้น (ความล่าช้าในการซิงค์ หรือขีดจำกัดที่ตั้งการเตือนได้เฉพาะ 50 รายการที่ใกล้ถึงเวลาที่สุดต่อเครื่อง อาจทำให้การเตือนบางรายการไม่แสดง)</p>
+
+<h3>ค้นหาตามความหมาย</h3>
+<p>การค้นหาตามความหมายใช้ข้อมูลที่แปลงมาสำหรับอุปกรณ์จากโมเดลภาษาสาธารณะ multilingual-e5-small (สัญญาอนุญาต MIT) ข้อมูลนี้ (ประมาณ 93 MB) จะรับจาก App Store เฉพาะเมื่อคุณแตะ “ดาวน์โหลด” และเก็บไว้ในอุปกรณ์ (ไม่รวมอยู่ในการสำรองข้อมูล) ทั้งการค้นหาและการสร้างดัชนีทำงานในอุปกรณ์เท่านั้น ข้อความในไอเดียของคุณและคำค้นหาจะไม่ถูกส่งออกไปภายนอกเลย</p>
+
 <h3>เครือข่าย</h3>
 <p>บริการที่แอปติดต่อโดยอัตโนมัติมีเพียงบริการของ Apple ต่อไปนี้เท่านั้น</p>
 <ul>
@@ -969,6 +1161,8 @@
   <li>App Store (StoreKit): การซื้อ Hirameki Plus การกู้คืนการซื้อ และการตรวจสอบสถานะการซื้อ แอปจะไม่ได้รับข้อมูลการชำระเงินเลย</li>
 </ul>
 <p>บริการเหล่านี้ประมวลผลภายใต้นโยบายความเป็นส่วนตัวของ Apple ไม่ต้องลงทะเบียน แอปจะเปิดข้อกำหนดการใช้งาน หน้านี้ หรือแอปคำสั่งลัดของ Apple เฉพาะเมื่อคุณแตะลิงก์เท่านั้น</p>
+
+<p>นอกจากนี้ แอปจะรับข้อมูลการค้นหาตามความหมายจาก App Store เฉพาะเมื่อคุณเลือกดาวน์โหลดข้อมูลนั้นเท่านั้น</p>
 
 <h3>ข้อมูลที่แอปไม่เก็บรวบรวม</h3>
 <ul>
@@ -985,6 +1179,7 @@
   <li>การลบแอปจะลบข้อมูลในอุปกรณ์ ข้อมูลที่ยังอยู่ใน iCloud ลบได้จาก การตั้งค่า → ชื่อของคุณ → iCloud → จัดการพื้นที่จัดเก็บ (หรือ จัดการพื้นที่จัดเก็บบัญชี) → Hirameki การลบข้อมูล iCloud จะไม่ลบไอเดียที่ยังอยู่ในอุปกรณ์ของคุณ</li>
   <li>ไฟล์ TXT และ JSON ที่คุณส่งออกไว้อยู่นอกแอป โปรดลบไฟล์เหล่านั้นในที่ที่คุณบันทึกไว้</li>
   <li>ประวัติการซื้อใน App Store ของคุณจัดการโดย Apple</li>
+  <li>ข้อมูลและดัชนีของการค้นหาตามความหมายจะถูกลบด้วย ลบข้อมูล “ค้นหาตามความหมาย” ในการตั้งค่า (ไอเดียของคุณยังอยู่)</li>
 </ul>
 
 <h3>ติดต่อ</h3>
@@ -996,7 +1191,7 @@
 
 <div lang="vi">
 <h2 id="vi">Chính sách quyền riêng tư của Hirameki</h2>
-<p class="date">Cập nhật lần cuối: ngày 14 tháng 11 năm 2026</p>
+<p class="date">Cập nhật lần cuối: ngày 27 tháng 11 năm 2026</p>
 
 <p>Hirameki (“ứng dụng”) là ứng dụng ghi chú cho iPhone do 半歩舎 (Hanposha) phát triển và phân phối. Ứng dụng lưu và sắp xếp những ý tưởng bạn nói với Siri hoặc với bạn đồng hành của bạn (mèo, chó hoặc cú mèo). Ý tưởng và thông tin cá nhân bạn lưu không bao giờ được gửi đến nhà phát triển, và ứng dụng không dùng dịch vụ quảng cáo hay phân tích nào. Không có máy chủ của nhà phát triển.</p>
 
@@ -1007,6 +1202,10 @@
   <li>Cài đặt và các thông tin tương tự: bạn đồng hành bạn chọn, bạn đồng hành bạn chọn đầu tiên, bạn có Hirameki Plus hay không và đến khi nào, và trạng thái đồng bộ iCloud (mã định danh của tài khoản được đồng bộ và tiến trình đồng bộ).</li>
   <li>Bản ghi xóa: với những ý tưởng bạn “Xóa vĩnh viễn”, chỉ giữ lại một số định danh và thời điểm xóa, để bản sao cũ trên thiết bị khác không thể khiến chúng xuất hiện lại (không giữ nội dung văn bản).</li>
   <li>Giọng nói: những gì bạn nói qua “Nói với bạn đồng hành” được chuyển thành văn bản bằng nhận dạng giọng nói trên thiết bị. Không lưu bản ghi âm nào.</li>
+  <li>Đã xong và lời nhắc: thời điểm bạn đánh dấu ý tưởng là đã xong và thời gian nhắc của ý tưởng đó. Những thông tin này được lưu cùng ý tưởng và được đồng bộ nếu bạn dùng đồng bộ iCloud.</li>
+  <li>Bản nháp: nội dung trên màn hình “Nói với bạn đồng hành” (lời bạn đã nói và mọi thứ bạn đã gõ hoặc sửa), việc nội dung đó có dành cho danh sách mua sắm hay không, và mã định danh của ý tưởng sẽ được thêm nội dung vào. Được giữ trong vùng lưu cài đặt của ứng dụng trên thiết bị và không đồng bộ qua iCloud (có thể nằm trong bản sao lưu thiết bị của bạn). Bản nháp bị xóa khi “Gửi” lưu nội dung hoặc khi bạn chạm vào “Xóa những lời này”. Bản nháp quá 7 ngày kể từ lần lưu gần nhất sẽ bị bỏ, không được khôi phục, vào lần tới bạn mở “Nói với bạn đồng hành”.</li>
+  <li>Chỉ mục Tìm theo nghĩa: nếu bạn đã tải xuống dữ liệu Tìm theo nghĩa, với mỗi ý tưởng, ứng dụng lưu trên thiết bị một dãy số được tạo từ nội dung (dùng để so sánh nghĩa) và một giá trị ngắn cho biết nội dung đã thay đổi hay chưa. Dữ liệu này không được đồng bộ và cũng không được sao lưu.</li>
+<!-- v1.5 -->
 </ul>
 
 <h3>Nơi lưu trữ và đồng bộ dữ liệu</h3>
@@ -1027,6 +1226,12 @@
 <h3>AI trên thiết bị</h3>
 <p>Trên các thiết bị hỗ trợ Apple Intelligence, mô hình trên thiết bị của Apple (Foundation Models) viết tiêu đề, danh mục và bản tóm tắt cho ý tưởng của bạn. Việc này chạy trên thiết bị; ứng dụng không gửi gì ra ngoài cho việc này.</p>
 
+<h3>Thông báo</h3>
+<p>Lời nhắc bạn đặt bằng chuông được lên lịch ngay trên thiết bị và không bao giờ đi qua máy chủ của nhà phát triển. Lời nhắc hiển thị tiêu đề của ý tưởng (tối đa 60 ký tự). Việc nội dung có hiện trên Màn hình khóa hay không tùy theo cài đặt thông báo của iOS. Thời gian nhắc cũng được đồng bộ sang các thiết bị khác của bạn qua iCloud, và mỗi thiết bị tự lên lịch lời nhắc nếu thiết bị đó cho phép thông báo (do đồng bộ chậm, hoặc do giới hạn 50 lời nhắc gần nhất trên mỗi thiết bị, có thể có lời nhắc không hiện ra).</p>
+
+<h3>Tìm theo nghĩa</h3>
+<p>Tìm theo nghĩa sử dụng dữ liệu được chuyển đổi cho thiết bị từ mô hình ngôn ngữ công khai multilingual-e5-small (Giấy phép MIT). Dữ liệu (khoảng 93 MB) chỉ được nhận từ App Store khi bạn chạm vào “Tải xuống”, và được giữ trên thiết bị (không nằm trong bản sao lưu). Cả việc tìm kiếm lẫn việc tạo chỉ mục đều chỉ chạy trên thiết bị; nội dung ý tưởng và từ khóa tìm kiếm của bạn không bao giờ được gửi ra ngoài.</p>
+
 <h3>Mạng</h3>
 <p>Các dịch vụ duy nhất mà ứng dụng tự động kết nối là các dịch vụ sau đây của Apple.</p>
 <ul>
@@ -1034,6 +1239,8 @@
   <li>App Store (StoreKit): mua Hirameki Plus, khôi phục giao dịch mua và kiểm tra trạng thái mua. Ứng dụng không bao giờ nhận thông tin thanh toán.</li>
 </ul>
 <p>Các dịch vụ này được xử lý theo chính sách quyền riêng tư của Apple. Không cần đăng ký. Ứng dụng chỉ mở Điều khoản sử dụng, trang này hoặc ứng dụng Phím tắt của Apple khi bạn chạm vào một liên kết.</p>
+
+<p>Ngoài ra, ứng dụng chỉ nhận dữ liệu Tìm theo nghĩa từ App Store khi bạn chọn tải xuống dữ liệu đó.</p>
 
 <h3>Thông tin ứng dụng không thu thập</h3>
 <ul>
@@ -1050,6 +1257,7 @@
   <li>Xóa ứng dụng sẽ xóa dữ liệu trên thiết bị. Dữ liệu còn lại trên iCloud có thể xóa trong Cài đặt → tên của bạn → iCloud → Quản lý dung lượng (hoặc Quản lý dung lượng tài khoản) → Hirameki. Xóa dữ liệu iCloud không xóa các ý tưởng vẫn còn trên thiết bị của bạn.</li>
   <li>Các tệp TXT và JSON bạn đã xuất nằm bên ngoài ứng dụng; hãy xóa chúng tại nơi bạn đã lưu.</li>
   <li>Lịch sử mua hàng trên App Store của bạn do Apple quản lý.</li>
+  <li>Dữ liệu và chỉ mục Tìm theo nghĩa sẽ bị xóa bằng Xóa dữ liệu “Tìm theo nghĩa” trong phần cài đặt (ý tưởng của bạn vẫn được giữ).</li>
 </ul>
 
 <h3>Liên hệ</h3>
@@ -1061,7 +1269,7 @@
 
 <div lang="ms">
 <h2 id="ms">Dasar Privasi Hirameki</h2>
-<p class="date">Kemas kini terakhir: 14 November 2026</p>
+<p class="date">Kemas kini terakhir: 27 November 2026</p>
 
 <p>Hirameki (“app”) ialah app nota untuk iPhone yang dibangunkan dan diedarkan oleh 半歩舎 (Hanposha). App ini menyimpan dan menyusun idea yang anda beritahu kepada Siri atau teman anda (kucing, anjing atau burung hantu). Idea dan maklumat peribadi yang anda simpan tidak sekali-kali dihantar kepada pembangun, dan tiada perkhidmatan pengiklanan atau analitis digunakan. Tiada pelayan pembangun.</p>
 
@@ -1072,6 +1280,10 @@
   <li>Tetapan dan seumpamanya: teman yang anda pilih, teman yang anda pilih pada mulanya, sama ada anda mempunyai Hirameki Plus dan sehingga bila, dan keadaan penyegerakan iCloud (pengecam akaun yang disegerakkan dan kemajuan penyegerakan).</li>
   <li>Rekod pemadaman: bagi idea yang anda “Padam Selamanya”, hanya nombor pengenalan dan masa pemadaman disimpan, supaya salinan lama pada peranti lain tidak dapat mengembalikannya (teksnya tidak disimpan).</li>
   <li>Suara: apa yang anda sebut melalui “Cakap dengan Teman” ditukar kepada teks oleh pengecaman pertuturan pada peranti. Tiada rakaman disimpan.</li>
+  <li>Selesai dan peringatan: bila anda menandakan idea sebagai selesai, dan masa peringatannya. Maklumat ini disimpan bersama idea dan disegerakkan jika anda menggunakan penyegerakan iCloud.</li>
+  <li>Draf: teks pada skrin “Cakap dengan Teman” (apa yang anda katakan dan apa-apa yang anda taip atau sunting), sama ada ia untuk senarai beli-belah, dan pengecam idea yang akan ditambah teks itu. Disimpan dalam storan tetapan apl pada peranti dan tidak disegerakkan melalui iCloud (ia mungkin termasuk dalam sandaran peranti anda). Ia dibuang apabila “Serah” menyimpannya atau apabila anda mengetik “Padam Kata-kata Itu”. Draf yang lebih lama daripada 7 hari sejak kali terakhir disimpan akan digugurkan, bukan dipulihkan, apabila anda membuka “Cakap dengan Teman” pada kali seterusnya.</li>
+  <li>Indeks Cari mengikut maksud: jika anda telah memuat turun data Cari mengikut maksud, untuk setiap idea apl menyimpan pada peranti satu senarai nombor yang dihasilkan daripada teksnya (digunakan untuk membandingkan maksud) dan satu nilai pendek yang menunjukkan sama ada teks telah berubah. Ia tidak disegerakkan dan tidak disandarkan.</li>
+<!-- v1.5 -->
 </ul>
 
 <h3>Tempat data disimpan dan disegerakkan</h3>
@@ -1092,6 +1304,12 @@
 <h3>AI pada peranti</h3>
 <p>Pada peranti yang menyokong Apple Intelligence, model pada peranti Apple (Foundation Models) menulis tajuk, kategori dan ringkasan untuk idea anda. Proses ini berjalan pada peranti; app tidak menghantar apa-apa keluar untuknya.</p>
 
+<h3>Pemberitahuan</h3>
+<p>Peringatan yang anda tetapkan dengan loceng dijadualkan pada peranti dan tidak pernah melalui pelayan pembangun. Peringatan memaparkan tajuk idea (sehingga 60 aksara). Sama ada kandungannya muncul pada Skrin Kunci bergantung pada tetapan pemberitahuan iOS anda. Masa peringatan juga disegerakkan ke peranti anda yang lain melalui iCloud, dan setiap peranti menjadualkan peringatan itu sendiri jika pemberitahuan dibenarkan padanya (kelewatan penyegerakan, atau had 50 peringatan terdekat bagi setiap peranti, boleh menyebabkan sesuatu peringatan tidak muncul).</p>
+
+<h3>Cari mengikut maksud</h3>
+<p>Cari mengikut maksud menggunakan data yang ditukar untuk peranti daripada model bahasa awam multilingual-e5-small (Lesen MIT). Data tersebut (kira-kira 93 MB) diterima daripada App Store hanya apabila anda mengetik “Muat Turun”, dan disimpan pada peranti (dikecualikan daripada sandaran). Carian dan pembinaan indeks kedua-duanya berjalan hanya pada peranti; teks idea anda dan perkataan carian anda tidak pernah dihantar keluar.</p>
+
 <h3>Rangkaian</h3>
 <p>Satu-satunya perkhidmatan yang dihubungi oleh app secara automatik ialah perkhidmatan Apple berikut.</p>
 <ul>
@@ -1099,6 +1317,8 @@
   <li>App Store (StoreKit): membeli Hirameki Plus, memulihkan pembelian dan menyemak status pembelian. Maklumat pembayaran tidak sekali-kali diterima oleh app.</li>
 </ul>
 <p>Perkhidmatan ini diproses di bawah dasar privasi Apple. Pendaftaran tidak diperlukan. App hanya membuka Terma Penggunaan, halaman ini atau app Pintasan Apple apabila anda mengetik pautan.</p>
+
+<p>Selain itu, apl hanya menerima data Cari mengikut maksud daripada App Store apabila anda memilih untuk memuat turun data tersebut.</p>
 
 <h3>Maklumat yang tidak dikumpulkan oleh app</h3>
 <ul>
@@ -1115,6 +1335,7 @@
   <li>Memadamkan app akan membuang data pada peranti. Data yang masih ada dalam iCloud boleh dipadamkan daripada Seting → nama anda → iCloud → Urus Storan (atau Urus Storan Akaun) → Hirameki. Memadamkan data iCloud tidak memadamkan idea yang masih ada pada peranti anda.</li>
   <li>Fail TXT dan JSON yang anda eksport berada di luar app; padamkannya di tempat anda menyimpannya.</li>
   <li>Sejarah pembelian App Store anda diurus oleh Apple.</li>
+  <li>Data dan indeks Cari mengikut maksud dibuang dengan Padam Data “Cari mengikut maksud” dalam tetapan (idea anda kekal).</li>
 </ul>
 
 <h3>Hubungi</h3>
